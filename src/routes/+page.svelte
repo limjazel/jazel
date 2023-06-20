@@ -71,7 +71,9 @@
 <div class="[ mt-10 py-10 ]">
   <h2>Copy to clipboard</h2>
 
-  <CopyToClipboard let:copy value="https://jazellim.com">
-    <button on:click={copy}>copy</button>
-  </CopyToClipboard>
+  <div class="[ flex ]">
+    <CopyToClipboard let:copy value="https://jazellim.com">
+      <Button on:click={copy}>Copy</Button>
+    </CopyToClipboard>
+  </div>
 </div>

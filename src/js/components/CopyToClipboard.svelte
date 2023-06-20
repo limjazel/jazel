@@ -1,5 +1,10 @@
 <script>
+  export let id = "";
+  export let name = "";
   export let value = "";
+  export { className as class };
+
+  let className;
   let notification = false;
   let notificationTitle = "";
   let notificationMessage = "";
@@ -24,14 +29,22 @@
 </script>
 
 {#if notification}
-  <span class="[ font-semibold ]">{notificationTitle}</span>
-  <span>{notificationMessage}</span>
+  <div>
+    <span class="[ font-semibold ]">{notificationTitle}</span>
+    <span>{notificationMessage}</span>
+  </div>
 {/if}
 
-<label id="copy-to-clipboard" for="copy-to-clipboard" class="[ sr-only ]">
-  Copy URL
-</label>
+<label for={id} class="[ sr-only ]"> Copy URL </label>
 
-<input type="text" {value} readonly />
+<input
+  {id}
+  {name}
+  {value}
+  readonly
+  class="[ block w-full rounded outline-none px-5 ]
+         [ border border-shade bg-canvas ]
+         [ placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]"
+/>
 
 <slot {copy} />
