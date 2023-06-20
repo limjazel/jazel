@@ -1,0 +1,1 @@
+<button class="bg-green-100">i am a button</button>
