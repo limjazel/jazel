@@ -4,7 +4,9 @@
   export let type = "stroke";
   export { className as class };
 
-  const baseStyle = `[ cursor-pointer underline underline-offset-2 decoration-2 ] [ font-semibold ]`;
+  const baseStyle = `[ cursor-pointer underline underline-offset-2 decoration-2 ]
+                    [ focus:ring-2 ring-offset-2 ring-stroke ] 
+                    [ font-semibold rounded ]`;
 
   const types = {
     accent: "c-link--accent [ text-accent ]",

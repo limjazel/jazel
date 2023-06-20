@@ -50,5 +50,19 @@
 <div class="[ mt-10 py-10 ]">
   <h2>Input</h2>
 
-  <Input id="input" name="an-input" placeholder="type anything" />
+  <div class="[ grid md:grid-cols-3 gap-4 ]">
+    <Input id="input" name="an-input" placeholder="I am an input" />
+    <Input
+      id="input"
+      name="an-input"
+      placeholder="I am a readonly input"
+      readonly={true}
+    />
+    <Input
+      id="input"
+      name="an-input"
+      placeholder="I display an error message"
+      error={true}
+    />
+  </div>
 </div>

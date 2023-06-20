@@ -24,19 +24,32 @@
   }
 
   let className = "";
-  let element;
 </script>
 
-<input
-  {id}
-  {name}
-  {value}
-  {type}
-  {placeholder}
-  {readonly}
-  bind:this={element}
-  on:input={handleInput}
-  class="c-input [ block w-full rounded outline-none ]
-        [ border border-stroke placeholder-neutral-500 focus:ring-2 ring-offset-2 ring-accent2 ]
+<span>
+  <input
+    {id}
+    {name}
+    {value}
+    {type}
+    {placeholder}
+    {readonly}
+    on:input={handleInput}
+    class:c-input--error={error}
+    class:border-red-600={error}
+    class:c-input--readonly={readonly}
+    class:bg-canvas={readonly}
+    class:border-shade={readonly}
+    class:cursor-not-allowed={readonly}
+    class="c-input
+        [ block w-full rounded outline-none ]
+        [ border border-stroke placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
         {Sizes[size]} {className}"
-/>
+  />
+
+  {#if error}
+    <span class="[ text-sm text-red-600 font-semibold ]"
+      >I am an example of an error message.</span
+    >
+  {/if}
+</span>
