@@ -1,5 +1,6 @@
 <script>
   import Button from "../js/components/Button.svelte";
+  import Input from "../js/components/Input.svelte";
   import Link from "../js/components/Link.svelte";
 </script>
 
@@ -41,5 +42,13 @@
   <h2>Link</h2>
 
   <Link href="/design">I will go to design page</Link>
-  <Link href="/design" external={true} type="accent" class="[ bg-stroke ]">I will open a new tab to design page</Link>
+  <Link href="/design" external={true} type="accent" class="[ bg-stroke ]"
+    >I will open a new tab to design page</Link
+  >
+</div>
+
+<div class="[ mt-10 py-10 ]">
+  <h2>Input</h2>
+
+  <Input id="input" name="an-input" placeholder="type anything" />
 </div>
