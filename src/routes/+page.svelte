@@ -1,7 +1,11 @@
 <script>
-  import Button from "../js/components/Button.svelte"
+  import Button from "../js/components/Button.svelte";
 </script>
 
-<h1>Welcome</h1>
+<p class="text-3xl">
+  I am a designer with experience on building web apps. I am a designer with
+  experience on building web apps.I am a designer with experience on building
+  web apps.
+</p>
 
 <Button />

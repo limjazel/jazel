@@ -2,7 +2,7 @@
   import Logomark from "../components/Logomark.svelte";
 </script>
 
-<nav>
+<nav class="py-4 md:py-6 flex flex-wrap items-center gap-x-10">
   <a href="/">
     <Logomark />
     <span class="sr-only">home</span>
