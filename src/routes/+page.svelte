@@ -1,5 +1,6 @@
 <script>
   import Button from "../js/components/Button.svelte";
+  import CopyToClipboard from "../js/components/CopyToClipboard.svelte";
   import Input from "../js/components/Input.svelte";
   import Link from "../js/components/Link.svelte";
 </script>
@@ -65,4 +66,12 @@
       error={true}
     />
   </div>
+</div>
+
+<div class="[ mt-10 py-10 ]">
+  <h2>Copy to clipboard</h2>
+
+  <CopyToClipboard let:copy value="https://jazellim.com">
+    <button on:click={copy}>copy</button>
+  </CopyToClipboard>
 </div>
