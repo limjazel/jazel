@@ -8,4 +8,30 @@
   web apps.
 </p>
 
-<Button />
+<div class="[ mt-10 py-10 ]">
+  <h2>Buttons</h2>
+
+  <div class="[ flex items-start gap-x-8 ]">
+    <div class="[ flex flex-col items-start gap-4 ]">
+      <Button type="primary">Primary</Button>
+      <Button type="primary" disabled>Primary</Button>
+    </div>
+
+    <div class="[ flex flex-col items-start gap-4 ]">
+      <Button type="primary" size="small">Primary</Button>
+      <Button type="primary" size="base">Primary</Button>
+      <Button type="primary" size="large">Primary</Button>
+    </div>
+
+    <div class="[ flex flex-col items-start gap-4 ]">
+      <Button type="neutral">Neutral</Button>
+      <Button type="neutral" disabled>Neutral</Button>
+    </div>
+    
+    <div class="[ flex flex-col items-start gap-4 ]">
+      <Button type="neutral" size="small">Neutral</Button>
+      <Button type="neutral" size="base">Neutral</Button>
+      <Button type="neutral" size="large">Neutral</Button>
+    </div>
+  </div>
+</div>
