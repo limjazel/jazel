@@ -34,13 +34,13 @@
   <h1 class="[ text-3xl ]">I am a title</h1>
 
   <div class="[ mt-10 grid gap-10 ]">
-    <Card class="[ mt-10 py-10 ]">
+    <Card class="[ py-10 ]">
       <span class="[ text-sm relative -top-2 ]">Buttons</span>
       <p>Here is something about these buttons,</p>
 
       <div class="[ mt-10 flex flex-wrap md:flex-nowrap items-start gap-10 ]">
         <div>
-          <h3 class="[ mb-2 ]">Accent buttons</h3>
+          <h3 class="[ mb-2 tracking-tight ]">Accent buttons</h3>
           <div class="[ flex gap-4 ]">
             <div class="[ flex flex-col items-start gap-4 ]">
               <Button type="primary" size="large">Primary</Button>
@@ -57,7 +57,7 @@
         </div>
 
         <div>
-          <h3 class="[ mb-2 ]">Secondary buttons</h3>
+          <h3 class="[ mb-2 tracking-tight ]">Secondary buttons</h3>
           <div class="[ flex gap-4 ]">
             <div class="[ flex flex-col items-start gap-4 ]">
               <Button type="neutral" size="large">Neutral</Button>
@@ -74,7 +74,7 @@
         </div>
         
         <div>
-          <h3 class="[ mb-2 ]">Outline buttons</h3>
+          <h3 class="[ mb-2 tracking-tight ]">Outline buttons</h3>
           <div class="[ flex gap-4 ]">
             <div class="[ flex flex-col items-start gap-4 ]">
               <Button type="outline" size="large">Neutral</Button>

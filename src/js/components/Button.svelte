@@ -15,10 +15,10 @@
 
   const sizes = {
     none: "",
-    base: "c-button--base [ px-5 py-2 font-semibold ]",
-    small: "c-button--small [ px-3 py-1 font-semibold text-sm ]",
+    base: "c-button--base [ px-5 py-2 ]",
+    small: "c-button--small [ px-3 py-1 text-sm ]",
     large:
-      "c-button--large [ px-8 py-3 font-semibold text-lg tracking-tight w-full flex ]",
+      "c-button--large [ px-8 py-3 font-medium text-lg w-full flex ]",
   };
 
   const types = {
