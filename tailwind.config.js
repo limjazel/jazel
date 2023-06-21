@@ -10,6 +10,7 @@ export default {
         shade: '#787664',
         neutral: '#CAC4B7',
         canvas: '#F3F1EE',
+        pearl: '#FDFCFC',
         stroke: '#11190C',
       },
     },  
