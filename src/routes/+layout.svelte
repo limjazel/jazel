@@ -5,8 +5,6 @@
   import Page from "../js/layouts/Page.svelte";
 </script>
 
-<Page>
-  <AppHeader />
+<AppHeader />
 
-  <slot />
-</Page>
+<slot />
