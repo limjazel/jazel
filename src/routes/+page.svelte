@@ -33,9 +33,7 @@
 <section>
   <h1>a thing</h1>
 
-  <Card />
-
-  <div class="[ mt-10 py-10 ]">
+  <Card class="[ mt-10 py-10 ]">
     <h2>Buttons</h2>
 
     <div class="[ flex items-start gap-x-8 ]">
@@ -61,7 +59,7 @@
         <Button type="neutral" size="large">Neutral</Button>
       </div>
     </div>
-  </div>
+  </Card>
 
   <div class="[ mt-10 py-10 ]">
     <h2>Link</h2>
