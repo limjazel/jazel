@@ -22,7 +22,11 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div use:clickOutside on:click-outside={() => (open = false)}>
+<div
+  use:clickOutside
+  on:click-outside={() => (open = false)}
+  class="[ inline-block ]"
+>
   <slot name="trigger" {toggleMenu} {closeMenu} />
 
   <nav

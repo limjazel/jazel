@@ -33,7 +33,7 @@
 <section class="[ mt-20 ]">
   <h1 class="[ text-3xl ]">I am a title</h1>
 
-  <div class="[ mt-10 flex items-start gap-8 ]">
+  <div class="[ mt-10 grid gap-10 ]">
     <Card class="[ mt-10 py-10 ]">
       <span class="[ text-sm relative -top-2 ]">Buttons</span>
       <p>Here is something about these buttons,</p>
@@ -75,19 +75,23 @@
       </div>
     </Card>
 
-    <div class="[ mt-10 py-10 ]">
-      <h2>Link</h2>
+    <Card class="[ py-10 min-w-[20rem] ]">
+      <span class="[ text-sm relative -top-2 ]">Link</span>
+      <p>Here is something about these links,</p>
 
-      <Link href="/design">I will go to design page</Link>
-      <Link href="/design" external={true} type="accent" class="[ bg-stroke ]"
-        >I will open a new tab to design page</Link
-      >
-    </div>
+      <div class="[ mt-10 flex flex-col gap-y-4 ]">
+        <Link href="/design">I will go to design page</Link>
+        <Link href="/design" external={true} class="[whitespace-nowrap ]">
+          I will open design page in a new tab
+        </Link>
+      </div>
+    </Card>
 
-    <div class="[ mt-10 py-10 ]">
-      <h2>Input</h2>
+    <Card class="[ py-10 ]">
+      <span class="[ text-sm relative -top-2 ]">Input</span>
+      <p>Here is something about these inputs,</p>
 
-      <div class="[ grid md:grid-cols-3 gap-4 ]">
+      <div class="[ mt-10 grid md:grid-cols-3 gap-4 ]">
         <div>
           <label for="input" class="[ block mb-1 text-sm font-semibold ]">
             A normal input box
@@ -110,7 +114,7 @@
           />
         </div>
 
-        <div>
+        <!-- <div>
           <label for="error-input" class="[ block mb-1 text-sm font-semibold ]">
             An input box with an error message
           </label>
@@ -120,66 +124,68 @@
             placeholder="I display an error message"
             error={true}
           />
-        </div>
+        </div> -->
       </div>
-    </div>
+    </Card>
 
-    <div class="[ mt-10 py-10 ]">
-      <h2>Dropdown</h2>
-
+    <Card class="[ py-10 ]">
+      <span class="[ text-sm relative -top-2 ]">Dropdown</span>
       <p>
         you can also close dropdown menu when you press escape key or click
         outside the menu.
       </p>
 
-      <Dropdown>
-        <div slot="trigger" let:toggleMenu>
-          <Button on:click={toggleMenu}>
-            {#if !selected}
-              Select an option
-            {:else}
-              {selected}
-            {/if}
-          </Button>
-        </div>
+      <div class="[ mt-10 ]">
+        <Dropdown>
+          <svelte:fragment slot="trigger" let:toggleMenu>
+            <Button on:click={toggleMenu}>
+              {#if !selected}
+                Select an option
+              {:else}
+                {selected}
+              {/if}
+            </Button>
+          </svelte:fragment>
 
-        <nav
-          slot="menu"
-          let:closeMenu
-          class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]"
-        >
-          {#each options as option (option.id)}
-            <div>
-              <input
-                type="radio"
-                bind:group={selected}
-                id={option.id}
-                name={option.id}
-                on:click={selectOption}
-                on:click={closeMenu}
-                value={option.value}
-                class="[ peer fixed opacity-0 ]"
-              />
-              <label
-                for={option.id}
-                class="[ py-1 text-sm text-canvas hover:text-accent block cursor-pointer ] [ peer-focus:ring-2 ring-accent rounded ]"
-              >
-                {option.value}
-              </label>
-            </div>
-          {/each}
-        </nav>
-      </Dropdown>
-    </div>
+          <nav
+            slot="menu"
+            let:closeMenu
+            class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]"
+          >
+            {#each options as option (option.id)}
+              <div>
+                <input
+                  type="radio"
+                  bind:group={selected}
+                  id={option.id}
+                  name={option.id}
+                  on:click={selectOption}
+                  on:click={closeMenu}
+                  value={option.value}
+                  class="[ peer fixed opacity-0 ]"
+                />
+                <label
+                  for={option.id}
+                  class="[ py-1 text-sm text-canvas hover:text-accent font-normal block cursor-pointer ] [ peer-focus:ring-2 ring-accent rounded ]"
+                >
+                  {option.value}
+                </label>
+              </div>
+            {/each}
+          </nav>
+        </Dropdown>
+      </div>
+    </Card>
 
-    <div class="[ mt-10 py-10 ]">
-      <h2>Copy to clipboard</h2>
+    <Card class="[ py-10 ]">
+      <span class="[ text-sm relative -top-2 ]">Copy to clipboard</span>
+      <p>something about copy to clipboard</p>
 
-      <div class="[ flex ]">
+      <div class="[ mt-10 flex ]">
         <CopyToClipboard let:copy value="https://jazellim.com">
-          <Button on:click={copy}>Copy</Button>
+          <Button on:click={copy} class="[ -ml-1 rounded-l-none  ]">Copy</Button>
         </CopyToClipboard>
       </div>
-    </div>
+    </Card>
   </div>
 </section>

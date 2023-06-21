@@ -37,19 +37,19 @@
     on:input={handleInput}
     class:c-input--error={error}
     class:border-red-600={error}
+    class:ring-red-600={error}
     class:c-input--readonly={readonly}
     class:bg-canvas={readonly}
-    class:border-shade={readonly}
     class:cursor-not-allowed={readonly}
     class="c-input
         [ block w-full rounded outline-none ]
-        [ border border-stroke placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
+        [ border placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
         {Sizes[size]} {className}"
   />
 
   {#if error}
-    <span class="[ text-sm text-red-600 ]"
-      >I am an example of an error message.</span
+    <span class="[ text-sm text-red-600 ]">
+      I am an example of an error message.</span
     >
   {/if}
 </span>
