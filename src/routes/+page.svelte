@@ -24,11 +24,18 @@
   }
 </script>
 
-<h1 class="text-3xl">
-  I am a designer with experience on building web apps. I am a designer with
-  experience on building web apps.I am a designer with experience on building
-  web apps.
-</h1>
+<div class="[ flex flex-wrap items-center lg:justify-between min-h-[60vh] ]">
+  <div class="[ max-w-2xl py-20 ]">
+    <h1 class="[ text-6xl ]">Hello! I am a sturgeon.</h1>
+    <p class="[ mt-4 text-xl leading-relaxed ]">
+      I am a designer with experience on building web apps. I am a designer with
+      experience on building web apps.I am a designer with experience on
+      building web apps.
+    </p>
+  </div>
+
+  <img src="https://placehold.co/400" alt="sample banner photo" class="[ mx-auto lg:mx-0 ]"/>
+</div>
 
 <section class="[ mt-20 ]">
   <h1 class="[ text-3xl ]">I am a title</h1>
@@ -72,7 +79,7 @@
             </div>
           </div>
         </div>
-        
+
         <div>
           <h3 class="[ mb-2 tracking-tight ]">Outline buttons</h3>
           <div class="[ flex gap-4 ]">
@@ -89,7 +96,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </Card>
 
@@ -201,7 +207,8 @@
 
       <div class="[ mt-10 flex ]">
         <CopyToClipboard let:copy value="https://jazellim.com">
-          <Button on:click={copy} class="[ -ml-1 rounded-l-none  ]">Copy</Button>
+          <Button on:click={copy} class="[ -ml-1 rounded-l-none  ]">Copy</Button
+          >
         </CopyToClipboard>
       </div>
     </Card>
