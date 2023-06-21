@@ -8,16 +8,20 @@
   function toggleMenu() {
     open = !open;
   }
+
+  function closeMenu() {
+    open = false;
+  }
 </script>
 
 <div use:clickOutside on:click-outside={() => (open = false)}>
-  <slot name="trigger" {toggleMenu} {open} />
+  <slot name="trigger" {toggleMenu} {closeMenu} />
 
   <nav
     bind:this={menu}
-    class="[ absolute z-10 ] [ grid grid-col max-w-[16rem] ] [ bg-canvas rounded px-5 py-4 mt-2 ]"
+    class="[ absolute z-10 ] [ grid grid-col max-w-[16rem] ] [ bg-canvas rounded mt-2 ]"
     class:hidden={!open}
   >
-    <slot name="menu" {toggleMenu} {open} />
+    <slot name="menu" {toggleMenu} {closeMenu} />
   </nav>
 </div>

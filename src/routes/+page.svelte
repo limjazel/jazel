@@ -5,8 +5,21 @@
   import Input from "../js/components/Input.svelte";
   import Link from "../js/components/Link.svelte";
 
-  function selectOption() {
-    console.error("hello");
+  let selected = "";
+
+  let options = [
+    {
+      id: "option-1",
+      value: "Option 1",
+    },
+    {
+      id: "option-2",
+      value: "Option 2",
+    },
+  ];
+
+  function selectOption(event) {
+    selected = event.target.value;
   }
 </script>
 
@@ -77,18 +90,36 @@
   <h2>Dropdown</h2>
 
   <Dropdown>
-    <svelte:fragment slot="trigger" let:toggleMenu>
+    <div slot="trigger" let:toggleMenu>
       <Button on:click={toggleMenu}>
-        <!-- {#if !selected} -->
-        Trigger
-        <!-- {:else}
+        {#if !selected}
+          Select an option
+        {:else}
           {selected}
-        {/if} -->
+        {/if}
       </Button>
-    </svelte:fragment>
+    </div>
 
-    <nav slot="menu">
-      <button on:click={selectOption}>option 1</button>
+    <nav slot="menu" let:closeMenu class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]">
+      {#each options as option (option.id)}
+        <div>
+          <input
+            id={option.id}
+            type="radio"
+            on:click={selectOption}
+            on:click={closeMenu}
+            value={option.value}
+            class="[ hidden ]"
+            tabindex="-1"
+          />
+          <label
+            for={option.id}
+            class="[ py-1 text-sm text-canvas hover:text-accent block cursor-pointer ]"
+          >
+            {option.value}
+          </label>
+        </div>
+      {/each}
     </nav>
   </Dropdown>
 </div>
