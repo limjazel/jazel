@@ -7,7 +7,7 @@ export default {
       colors: {
         accent: '#E6FF00',
         accent2: '#1900FF',
-        shade: '#787664',
+        shade: '#444638',
         neutral: '#CAC4B7',
         canvas: '#F3F1EE',
         pearl: '#FDFCFC',
