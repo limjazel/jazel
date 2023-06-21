@@ -1,8 +1,13 @@
 <script>
   import Button from "../js/components/Button.svelte";
   import CopyToClipboard from "../js/components/CopyToClipboard.svelte";
+  import Dropdown from "../js/components/Dropdown.svelte";
   import Input from "../js/components/Input.svelte";
   import Link from "../js/components/Link.svelte";
+
+  function selectOption() {
+    console.error("hello");
+  }
 </script>
 
 <p class="text-3xl">
@@ -66,6 +71,26 @@
       error={true}
     />
   </div>
+</div>
+
+<div class="[ mt-10 py-10 ]">
+  <h2>Dropdown</h2>
+
+  <Dropdown>
+    <svelte:fragment slot="trigger" let:toggleMenu>
+      <Button on:click={toggleMenu}>
+        <!-- {#if !selected} -->
+        Trigger
+        <!-- {:else}
+          {selected}
+        {/if} -->
+      </Button>
+    </svelte:fragment>
+
+    <nav slot="menu">
+      <button on:click={selectOption}>option 1</button>
+    </nav>
+  </Dropdown>
 </div>
 
 <div class="[ mt-10 py-10 ]">
