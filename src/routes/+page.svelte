@@ -89,7 +89,10 @@
 <div class="[ mt-10 py-10 ]">
   <h2>Dropdown</h2>
 
-  <p>you can also close dropdown menu when you press escape key or click outside the menu.</p>
+  <p>
+    you can also close dropdown menu when you press escape key or click outside
+    the menu.
+  </p>
 
   <Dropdown>
     <div slot="trigger" let:toggleMenu>
@@ -102,21 +105,26 @@
       </Button>
     </div>
 
-    <nav slot="menu" let:closeMenu class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]">
+    <nav
+      slot="menu"
+      let:closeMenu
+      class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]"
+    >
       {#each options as option (option.id)}
         <div>
           <input
-            id={option.id}
             type="radio"
+            bind:group={selected}
+            id={option.id}
+            name={option.id}
             on:click={selectOption}
             on:click={closeMenu}
             value={option.value}
-            class="[ hidden ]"
-            tabindex="-1"
+            class="[ peer fixed opacity-0 ]"
           />
           <label
             for={option.id}
-            class="[ py-1 text-sm text-canvas hover:text-accent block cursor-pointer ]"
+            class="[ py-1 text-sm text-canvas hover:text-accent block cursor-pointer ] [ peer-focus:ring-2 ring-accent rounded ]"
           >
             {option.value}
           </label>
