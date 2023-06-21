@@ -74,8 +74,8 @@
   {name}
   {value}
   readonly
-  class="[ block w-full rounded outline-none px-5 ]
-         [ border border-shade bg-canvas ]
+  class="[ block w-full rounded outline-none px-5 py-3 ]
+         [ border border-2 bg-canvas ]
          [ placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]"
 />
 

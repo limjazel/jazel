@@ -13,7 +13,7 @@
 
   const Sizes = {
     none: "",
-    base: "c-input--base [ px-5 py-3  ]",
+    base: "c-input--base [ px-5 py-3 ]",
   };
 
   const dispatch = createEventDispatcher();
@@ -43,7 +43,7 @@
     class:cursor-not-allowed={readonly}
     class="c-input
         [ block w-full rounded outline-none ]
-        [ border placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
+        [ border border-2 placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
         {Sizes[size]} {className}"
   />
 
