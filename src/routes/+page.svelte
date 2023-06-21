@@ -44,9 +44,9 @@
   </div>
 </Container>
 
-<section class="[ mt-20 bg-stroke ]">
+<section class="[ py-20 bg-stroke ]">
   <Container>
-    <h1 class="[ text-3xl text-canvas ]">I am a title</h1>
+    <h1 class="[ text-5xl text-canvas ]">I am a <span class="text-accent font-heading">title</span></h1>
 
     <div class="[ mt-10 grid gap-6 grid-cols-3 ]">
       <div class="col-span-3">
