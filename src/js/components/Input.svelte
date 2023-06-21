@@ -48,7 +48,7 @@
   />
 
   {#if error}
-    <span class="[ text-sm text-red-600 font-semibold ]"
+    <span class="[ text-sm text-red-600 ]"
       >I am an example of an error message.</span
     >
   {/if}

@@ -70,19 +70,36 @@
   <h2>Input</h2>
 
   <div class="[ grid md:grid-cols-3 gap-4 ]">
-    <Input id="input" name="an-input" placeholder="I am an input" />
-    <Input
-      id="input"
-      name="an-input"
-      placeholder="I am a readonly input"
-      readonly={true}
-    />
-    <Input
-      id="input"
-      name="an-input"
-      placeholder="I display an error message"
-      error={true}
-    />
+    <div>
+      <label for="input" class="[ block mb-1 text-sm font-semibold ]">
+        A normal input box
+      </label>
+      <Input id="input" name="an-input" placeholder="I am an input" />
+    </div>
+
+    <div>
+      <label for="readonly-input" class="[ block mb-1 text-sm font-semibold ]">
+        A readonly input box
+      </label>
+      <Input
+        id="readonly-input"
+        name="an-input"
+        placeholder="I am a readonly input"
+        readonly={true}
+      />
+    </div>
+
+    <div>
+      <label for="error-input" class="[ block mb-1 text-sm font-semibold ]">
+        An input box with an error message
+      </label>
+      <Input
+        id="error-input"
+        name="an-input"
+        placeholder="I display an error message"
+        error={true}
+      />
+    </div>
   </div>
 </div>
 
