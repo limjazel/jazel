@@ -12,7 +12,15 @@
   function closeMenu() {
     open = false;
   }
+
+  function handleKeydown(event) {
+    if (open && event.key === "Escape") {
+      closeMenu();
+    }
+  }
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <div use:clickOutside on:click-outside={() => (open = false)}>
   <slot name="trigger" {toggleMenu} {closeMenu} />

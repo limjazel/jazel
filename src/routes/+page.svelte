@@ -89,6 +89,8 @@
 <div class="[ mt-10 py-10 ]">
   <h2>Dropdown</h2>
 
+  <p>you can also close dropdown menu when you press escape key or click outside the menu.</p>
+
   <Dropdown>
     <div slot="trigger" let:toggleMenu>
       <Button on:click={toggleMenu}>
