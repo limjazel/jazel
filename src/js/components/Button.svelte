@@ -29,6 +29,7 @@
       "c-button--accent [ bg-accent text-stroke border-accent ] [ hover:bg-white hover:text-stroke hover:border-white ]",
     neutral:
       "c-button--neutral [ bg-neutral text-stroke border-neutral ] [ hover:bg-[#B6AE9D] ] [ focus:bg-[#B6AE9D] ]",
+    outline: "c-button--outline [ bg-canvas text-shade border-stroke ] [ hover:bg-neutral ]",
   };
 
   let className = "";
