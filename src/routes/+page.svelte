@@ -220,7 +220,7 @@
         </Card>
       </div>
 
-      <div class="col-span-3">
+      <div class="[ col-span-3 ]">
         <!-- Copy to clipboard -->
         <Card class="[ py-10 ]">
           <span class="[ text-sm relative -top-2 ]">Copy to clipboard</span>

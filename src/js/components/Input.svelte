@@ -13,7 +13,7 @@
 
   const Sizes = {
     none: "",
-    base: "c-input--base [ px-5 py-3 ]",
+    base: "c-input--base [ px-5 py-2 ]",
   };
 
   const dispatch = createEventDispatcher();
@@ -49,7 +49,7 @@
 
   {#if error}
     <span class="[ text-sm text-red-600 ]">
-      I am an example of an error message.</span
-    >
+      I am an example of an error message.
+    </span>
   {/if}
 </span>

@@ -5,7 +5,7 @@
   export let id = "";
   export let name = "";
   export let value = "";
-  export let timeout = 4000;
+  export let timeout = 5000;
 
   let timer;
   let notification = false;
@@ -55,8 +55,8 @@
   {name}
   {value}
   readonly
-  class="[ block w-full rounded outline-none px-5 py-3 ]
-         [ border border-2 bg-canvas ]
+  class="[ block w-full rounded outline-none px-5 py-2 ]
+         [ border-2 bg-canvas ]
          [ placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]"
 />
 
@@ -64,19 +64,25 @@
 
 {#if notification}
   <div
-    class="[ fixed bottom-0 right-0 px-4 pb-4 max-w-[340px] md:max-w-[360px] ] [ z-20 ]"
+    class="[ fixed bottom-2 right-2 px-4 pb-4 max-w-[340px] md:max-w-[360px] ] [ z-20 ]"
   >
     <div
       on:mouseenter={handleMouseEnter}
       on:mouseleave={handleMouseLeave}
       transition:scale={{ duration: 300 }}
-      class="[ flex flex-col ] [ bg-white rounded shadow px-8 py-5 ]"
+      class="[ flex flex-col ] [ bg-white rounded shadow-md px-6 py-6 ]"
     >
       <button
         on:click={() => (notification = false)}
-        class="[ absolute -mt-3 right-6 p-2 bg-red-100 ]">x</button
+        class="[ absolute -mt-4 right-2 p-2 rounded-full h-8 w-8 ] [ hover:bg-neutral ] [ flex items-center justify-center ]"
       >
-      <span class="[ font-bold ]">{notificationTitle}</span>
+        <span class="[ sr-only ]">Close notification</span>
+        <i aria-hidden="true" class="fa-solid fa-xmark [ text-shade ]" />
+      </button>
+
+      <h5 class="[ font-bold font-heading text-lg tracking-tight ]">
+        {notificationTitle}
+      </h5>
       <span>{notificationMessage}</span>
     </div>
   </div>
