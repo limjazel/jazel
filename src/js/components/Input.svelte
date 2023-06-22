@@ -1,8 +1,17 @@
 <script>
+// @ts-nocheck
+
   import { createEventDispatcher } from "svelte";
 
-  export let id;
-  export let name;
+  /**
+   * @type {any}
+   */
+   export let id;
+
+  /**
+   * @type {any}
+   */
+   export let name;
   export let value = "";
   export let type = "text";
   export let placeholder = "";
@@ -43,7 +52,7 @@
     class:cursor-not-allowed={readonly}
     class="c-input
         [ block w-full rounded outline-none ]
-        [ border border-2 placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
+        [ border-2 placeholder-zinc-400 focus:ring-2 ring-offset-2 ring-stroke ]
         {Sizes[size]} {className}"
   />
 
