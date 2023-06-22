@@ -6,46 +6,60 @@
 
   let keyword = "";
 
-  let results;
-  let fishes = [];
-
+  let fishes;
+  let results = [];
   let fuse;
+  let loading = true;
 
-  onMount(() => {
-    axios.get("https://acnhapi.com/v1/fish").then((response) => {
-      results = Object.values(response.data);
-
-      fuse = new Fuse(
-        results.map((result) => {
-          result.name = result.name["name-USen"];
-
-          return result;
-        }),
-        {
-          includeScore: true,
-          shouldSort: true,
-          threshold: 0.1,
-          keys: ["name"],
-        }
-      );
-      fishes = results;
+  onMount(async () => {
+    fishes = await axios.get("https://acnhapi.com/v1/fish").then((response) => {
+      return response.data;
     });
+
+    fishes = Object.values(fishes).map((fish) => {
+      fish.name = fish.name["name-USen"];
+      fish.museumPhrase = fish["museum-phrase"];
+      return fish;
+    });
+
+    loading = false;
+
+    fuse = new Fuse(fishes, {
+      includeScore: true,
+      shouldSort: true,
+      threshold: 0.1,
+      keys: ["name.name-USen"],
+    });
+
+    results = fishes;
   });
 
   function handleInput() {
-    fishes = fuse.search(keyword).map((fish) => fish.item);
+    results = fuse.search(keyword).map((result) => result.item);
   }
 </script>
 
 <span>Look for something</span>
-<Input type="text" bind:value={keyword} on:input={handleInput} placeholder="Type a fish name..."/>
+<Input
+  id=""
+  name=""
+  type="text"
+  bind:value={keyword}
+  on:input={handleInput}
+  placeholder="Type a fish name..."
+/>
 
 <div class="pb-20">
-  <div class="mt-10 grid grid-cols-4 gap-4">
-    {#each fishes as fish (fish.id)}
+  {#if loading}
+    catching the fishes...
+  {/if}
+
+  <div class="mt-10 grid grid-cols-12 gap-4">
+    {#each results as fish (fish.id)}
       <div>
         <span>{fish.name}</span>
         <img src={fish.icon_uri} alt={fish.name} />
+        <!-- <p>{fish.museumPhrase}</p> -->
       </div>
     {/each}
   </div>
