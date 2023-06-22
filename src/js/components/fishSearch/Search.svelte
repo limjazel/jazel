@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   import { createEventDispatcher } from "svelte";
   import Card from "../Card.svelte";
+  import Button from "../Button.svelte";
 
   export let data;
 
@@ -11,6 +12,7 @@
 
   let keyword = "";
   let fishes = data.fishes;
+  let selectedFish = data.fishes[0];
 
   /**
    * @type {any[]}
@@ -41,35 +43,51 @@
    * @param {any} fish
    */
   function selectFish(fish) {
-    let value = fish;
+    const value = fish;
+    selectedFish = fish;
     dispatch("select", { value });
   }
 </script>
 
 <Card class="[ grid ]">
-  <span>Look for something</span>
-
-  <Input
-    id=""
-    name=""
-    type="text"
-    bind:value={keyword}
-    on:input={handleInput}
-    placeholder="Type a fish name..."
-  />
+  <label for="fish-search-input" class="[ font-semibold ]">Look up a fish</label>
 
   <div
-    class="bg-yellow-200 [ mt-4 pt-2 pb-2 ] [ grid grid-cols-4 md:grid-cols-5 gap-x-4 gap-y-6 ] [ h-[50vh] overflow-y-auto ]"
+    class="[ pt-1 pb-3 ] [ bg-canvas ]"
+  >
+    <Input
+      id="fish-search-input"
+      name="fish-search-input"
+      type="text"
+      bind:value={keyword}
+      on:input={handleInput}
+      placeholder="Type a fish name..."
+    />
+  </div>
+
+  <div
+    class="[ pt-4 pb-6 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[50vh] overflow-y-auto ]"
   >
     {#each results as fish (fish.id)}
-      <button on:click={() => selectFish(fish)}>
-        <div class="[ flex flex-col items-center ]">
-          <div class="[ p-2 md:px-8 md:py-2 ]">
-            <img src={fish.icon_uri} alt={fish.name} />
+      <div
+        class:bg-neutral={fish === selectedFish}
+        class:ring-2={fish === selectedFish}
+        class:ring-stroke={fish === selectedFish}
+        class="[ flex rounded max-h-40 ]"
+      >
+        <Button
+          type="none"
+          on:click={() => selectFish(fish)}
+          class="[ hover:bg-neutral/50 ]"
+        >
+          <div class="[ flex flex-col items-center ]">
+            <div class="[ p-2 md:px-3 ]">
+              <img src={fish.icon_uri} alt={fish.name} />
+            </div>
+            <span class="[ text-sm ]">{fish.name}</span>
           </div>
-          <span class="[ text-sm ]">{fish.name}</span>
-        </div>
-      </button>
+        </Button>
+      </div>
     {/each}
   </div>
 </Card>
