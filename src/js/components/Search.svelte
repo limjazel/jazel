@@ -2,6 +2,7 @@
   import axios from "axios";
   import Fuse from "fuse.js";
   import { onMount } from "svelte";
+  import Input from "./Input.svelte";
 
   let keyword = "";
 
@@ -12,29 +13,38 @@
 
   onMount(() => {
     axios.get("https://acnhapi.com/v1/fish").then((response) => {
-      results = response.data;
+      results = Object.values(response.data);
 
-      fuse = new Fuse(results, {
-        includeScore: true,
-        keys: ["name"],
-      });
-      fishes = Object.values(results);
+      fuse = new Fuse(
+        results.map((result) => {
+          result.name = result.name["name-USen"];
+
+          return result;
+        }),
+        {
+          includeScore: true,
+          shouldSort: true,
+          threshold: 0.1,
+          keys: ["name"],
+        }
+      );
+      fishes = results;
     });
   });
 
   function handleInput() {
-    fishes = fuse.search(keyword).map((fish) => fish);
+    fishes = fuse.search(keyword).map((fish) => fish.item);
   }
 </script>
 
-Search a book
-<input type="text" bind:value={keyword} on:input={handleInput} />
+<span>Look for something</span>
+<Input type="text" bind:value={keyword} on:input={handleInput} placeholder="Type a fish name..."/>
 
 <div class="pb-20">
   <div class="mt-10 grid grid-cols-4 gap-4">
     {#each fishes as fish (fish.id)}
       <div>
-        <span>{fish.name["name-USen"]}</span>
+        <span>{fish.name}</span>
         <img src={fish.icon_uri} alt={fish.name} />
       </div>
     {/each}
