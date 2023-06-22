@@ -1,11 +1,13 @@
 <script>
   import Container from "../js/components/Container.svelte";
-  import Search from "../js/components/Search.svelte";
+  import Search from "../js/components/fishSearch/Search.svelte";
   import ButtonCard from "../js/components/home/ButtonCard.svelte";
   import CopyToClipboardCard from "../js/components/home/CopyToClipboardCard.svelte";
   import DropdownCard from "../js/components/home/DropdownCard.svelte";
   import InputCard from "../js/components/home/InputCard.svelte";
   import LinkCard from "../js/components/home/LinkCard.svelte";
+
+  export let data
 </script>
 
 <!-- banner -->
@@ -32,7 +34,7 @@
 <section>
   <Container>
     <h1 class="text-2xl">Searchable something! Wow!</h1>
-    <Search />
+    <Search {data}/>
   </Container>
 </section>
 
