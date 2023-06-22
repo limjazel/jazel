@@ -65,7 +65,7 @@
   </div>
 
   <div
-    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[50vh] overflow-y-auto ]"
+    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[55vh] overflow-y-auto ]"
   >
     {#each results as fish (fish.id)}
       <div

@@ -43,8 +43,8 @@
 <section>
   <Container>
     <h1 class="text-2xl">Searchable something! Wow!</h1>
-    <div class="[ grid lg:grid-cols-6 gap-8 ]">
-      <div class="bg-red-200 [ col-span-1 lg:col-span-2 ]">
+    <div class="[ mt-8 grid lg:grid-cols-6 gap-6 ] min-h-[40rem]">
+      <div class="[ col-span-1 lg:col-span-2 ]">
         <FishCard {selectedFish} />
       </div>
 
