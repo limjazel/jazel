@@ -23,7 +23,7 @@
     includeScore: true,
     shouldSort: true,
     threshold: 0.1,
-    keys: ["name"],
+    keys: ["name", "availability.location", "availability.rarity" ],
   });
 
   function handleInput() {

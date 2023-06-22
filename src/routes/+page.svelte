@@ -42,8 +42,19 @@
 
 <section>
   <Container>
-    <h1 class="text-2xl">Searchable something! Wow!</h1>
-    <div class="[ mt-8 grid lg:grid-cols-6 gap-6 ] min-h-[40rem]">
+    <div class="max-w-2xl px-6 md:px-8">
+      <h1 class="text-4xl">A tiny search library! Waoaw!</h1>
+
+      <p class="mt-3 text-lg">
+        One of the things I built quite a few times is a searchable library.
+      </p>
+      <p class="text-lg">
+        Using ACNH API (v1) for fish and fuse.js, here's a simple searchable
+        wiki for the water creatures in Animal Crossing (New Horizons).
+      </p>
+    </div>
+
+    <div class="[ mt-14 grid lg:grid-cols-6 gap-6 ] min-h-[40rem]">
       <div class="[ col-span-1 lg:col-span-2 ]">
         <FishCard {selectedFish} />
       </div>
