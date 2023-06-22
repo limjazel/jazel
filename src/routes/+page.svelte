@@ -1,5 +1,6 @@
 <script>
   import Container from "../js/components/Container.svelte";
+  import Search from "../js/components/Search.svelte";
   import ButtonCard from "../js/components/home/ButtonCard.svelte";
   import CopyToClipboardCard from "../js/components/home/CopyToClipboardCard.svelte";
   import DropdownCard from "../js/components/home/DropdownCard.svelte";
@@ -27,11 +28,17 @@
   </div>
 </Container>
 
+
+<section>
+  <Container>
+    <h1 class="text-2xl">Searchable something! Wow!</h1>
+    <Search />
+  </Container>
+</section>
+
 <section class="[ py-20 ]">
   <Container>
-    <h1 class="[ text-5xl ]">
-      I am a title
-    </h1>
+    <h1 class="[ text-5xl ]">I am a title</h1>
 
     <div class="[ mt-10 grid gap-6 grid-cols-3 ]">
       <div class="col-span-3">
@@ -54,3 +61,4 @@
     </div>
   </Container>
 </section>
+

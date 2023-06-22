@@ -45,7 +45,7 @@
       <nav
         slot="menu"
         let:closeMenu
-        class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke ]"
+        class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke/95 ]"
       >
         {#each options as option (option.id)}
           <div>
