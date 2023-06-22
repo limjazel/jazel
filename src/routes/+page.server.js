@@ -9,7 +9,7 @@ export async function load ({ params }) {
       return {
         ...fish,
         name: fish.name["name-USen"],
-        museumPhrase: fish["museum-phrase"],
+        museum_phrase: fish["museum-phrase"],
       }
     });
 

@@ -1,13 +1,20 @@
 <script>
   import Container from "../js/components/Container.svelte";
   import Search from "../js/components/fishSearch/Search.svelte";
+  import FishCard from "../js/components/fishSearch/FishCard.svelte";
   import ButtonCard from "../js/components/home/ButtonCard.svelte";
   import CopyToClipboardCard from "../js/components/home/CopyToClipboardCard.svelte";
   import DropdownCard from "../js/components/home/DropdownCard.svelte";
   import InputCard from "../js/components/home/InputCard.svelte";
   import LinkCard from "../js/components/home/LinkCard.svelte";
 
-  export let data
+  export let data;
+
+  let selectedFish = data.fishes[0];
+
+  function handleSelectedFish(event) {
+    selectedFish = event.detail.value;
+  }
 </script>
 
 <!-- banner -->
@@ -30,11 +37,18 @@
   </div>
 </Container>
 
-
 <section>
   <Container>
     <h1 class="text-2xl">Searchable something! Wow!</h1>
-    <Search {data}/>
+    <div class="[ grid lg:grid-cols-6 gap-8 ]">
+      <div class="bg-red-200 [ col-span-1 lg:col-span-2 ]">
+        <FishCard {selectedFish} />
+      </div>
+
+      <div class="[ col-span-1 lg:col-span-4 ]">
+        <Search {data} on:select={handleSelectedFish} />
+      </div>
+    </div>
   </Container>
 </section>
 
@@ -63,4 +77,3 @@
     </div>
   </Container>
 </section>
-
