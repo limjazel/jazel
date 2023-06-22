@@ -50,11 +50,10 @@
 </script>
 
 <Card class="[ grid ]">
-  <label for="fish-search-input" class="[ font-semibold ]">Look up a fish</label>
-
-  <div
-    class="[ pt-1 pb-3 ] [ bg-canvas ]"
+  <label for="fish-search-input" class="[ font-semibold ]">Look up a water creature</label
   >
+
+  <div class="[ pt-1 pb-3 ] [ bg-pearl ]">
     <Input
       id="fish-search-input"
       name="fish-search-input"
@@ -66,7 +65,7 @@
   </div>
 
   <div
-    class="[ pt-4 pb-6 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[50vh] overflow-y-auto ]"
+    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[50vh] overflow-y-auto ]"
   >
     {#each results as fish (fish.id)}
       <div
@@ -78,6 +77,7 @@
         <Button
           type="none"
           on:click={() => selectFish(fish)}
+          tabindex="0"
           class="[ hover:bg-neutral/50 ]"
         >
           <div class="[ flex flex-col items-center ]">

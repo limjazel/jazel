@@ -4,7 +4,10 @@
   export let submit = false;
   export let role = "";
   export let disabled = false;
-  export let tabindex = undefined;
+  /**
+   * @type {undefined}
+   */
+  export let tabindex =  undefined;
   export { className as class };
 
   const baseStyle = `
