@@ -12,6 +12,9 @@
 
   let selectedFish = data.fishes[0];
 
+  /**
+   * @param {{ detail: { value: any; }; }} event
+   */
   function handleSelectedFish(event) {
     selectedFish = event.detail.value;
   }
@@ -31,7 +34,7 @@
 
     <img
       src="https://placehold.co/400"
-      alt="sample banner photo"
+      alt="sample banner"
       class="[ mx-auto lg:mx-0 ]"
     />
   </div>

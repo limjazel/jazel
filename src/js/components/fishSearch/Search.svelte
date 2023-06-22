@@ -11,6 +11,10 @@
 
   let keyword = "";
   let fishes = data.fishes;
+
+  /**
+   * @type {any[]}
+   */
   let results = [];
 
   let fuse = new Fuse(fishes, {
@@ -33,6 +37,9 @@
     results = fishes;
   });
 
+  /**
+   * @param {any} fish
+   */
   function selectFish(fish) {
     let value = fish;
     dispatch("select", { value });

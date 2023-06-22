@@ -1,5 +1,8 @@
 <script>
-  export let selectedFish;
+  /**
+   * @type {{ name: any; image_uri: any; price: any; availability: { location: any; rarity: any; }; museum_phrase: any; }}
+   */
+   export let selectedFish;
 </script>
 
 <div class="flex flex-col">
