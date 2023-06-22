@@ -25,6 +25,7 @@
   }
 </script>
 
+<!-- banner -->
 <Container>
   <div class="[ flex flex-wrap items-center lg:justify-between min-h-[60vh] ]">
     <div class="[ max-w-2xl py-20 ]">
@@ -46,9 +47,12 @@
 
 <section class="[ py-20 bg-stroke ]">
   <Container>
-    <h1 class="[ text-5xl text-canvas ]">I am a <span class="text-accent font-heading">title</span></h1>
+    <h1 class="[ text-5xl text-canvas ]">
+      I am a <span class="text-accent font-heading">title</span>
+    </h1>
 
     <div class="[ mt-10 grid gap-6 grid-cols-3 ]">
+      <!-- buttons -->
       <div class="col-span-3">
         <Card class="[ py-10 ]">
           <span class="[ text-sm relative -top-2 ]">Buttons</span>
@@ -130,8 +134,8 @@
         </Card>
       </div>
 
+      <!-- Dropdown -->
       <div class="col-span-3 lg:col-span-2 grid gap-6">
-        <!-- Dropdown -->
         <Card
           class="[ py-10 ] [ flex flex-wrap items-center justify-between gap-y-8 ]"
         >
@@ -190,7 +194,7 @@
           <span class="[ text-sm relative -top-2 ]">Input</span>
           <p>Here is something about these inputs,</p>
 
-          <div class="[ mt-10 grid md:grid-cols-3 gap-4 ]">
+          <div class="[ mt-10 grid md:grid-cols-2 gap-4 ]">
             <div>
               <label for="input" class="[ block mb-1 text-sm font-semibold ]">
                 A normal input box
@@ -212,18 +216,6 @@
                 readonly={true}
               />
             </div>
-
-            <!-- <div>
-          <label for="error-input" class="[ block mb-1 text-sm font-semibold ]">
-            An input box with an error message
-          </label>
-          <Input
-            id="error-input"
-            name="an-input"
-            placeholder="I display an error message"
-            error={true}
-          />
-        </div> -->
           </div>
         </Card>
       </div>
