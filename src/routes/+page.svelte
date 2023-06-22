@@ -48,7 +48,7 @@
         <FishCard {selectedFish} />
       </div>
 
-      <div class="[ col-span-1 lg:col-span-4 ]">
+      <div class="[ col-span-1 lg:col-span-4 ] flex">
         <Search {data} on:select={handleSelectedFish} />
       </div>
     </div>

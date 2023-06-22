@@ -49,9 +49,10 @@
   }
 </script>
 
-<Card class="[ grid ]">
-  <label for="fish-search-input" class="[ font-semibold ]">Look up a water creature</label
-  >
+<Card class="[ grid items-start ]">
+  <label for="fish-search-input" class="[ font-semibold ]">
+    Look up a water creature
+  </label>
 
   <div class="[ pt-1 pb-3 ] [ bg-pearl ]">
     <Input
@@ -65,7 +66,7 @@
   </div>
 
   <div
-    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[55vh] overflow-y-auto ]"
+    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[32rem] overflow-y-auto ]"
   >
     {#each results as fish (fish.id)}
       <div
@@ -81,10 +82,10 @@
           class="[ hover:bg-neutral/50 ]"
         >
           <div class="[ flex flex-col items-center ]">
-            <div class="[ p-2 md:px-3 ]">
+            <div class="[ px-4 py-2 md:px-3 ]">
               <img src={fish.icon_uri} alt={fish.name} />
             </div>
-            <span class="[ text-sm ]">{fish.name}</span>
+            <span class="[ text-sm pb-4 md:pb-2 ]">{fish.name}</span>
           </div>
         </Button>
       </div>
