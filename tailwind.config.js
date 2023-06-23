@@ -13,6 +13,9 @@ export default {
         pearl: '#F8F6F4',
         stroke: '#11190C',
       },
+      backgroundImage: {
+        mac: "url('src/images/monterey.jpeg')"
+      }
     },  
   },
   plugins: [],

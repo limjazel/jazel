@@ -85,7 +85,7 @@
 
 <div
   class="[ mt-6 ] [ flex flex-col items-center justify-between ]
-         [ bg-purple-100 border-8 border-neutral ]
+         [ bg-mac bg-cover bg-center border-8 border-neutral ]
          [ min-h-[42rem] shadow-md rounded-md overflow-hidden ]"
 >
   <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full ]">
