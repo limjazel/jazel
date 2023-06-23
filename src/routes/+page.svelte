@@ -11,14 +11,6 @@
   export let data;
 
   let selectedFish = data.fishes[0];
-
-  /**
-   * @param {{ detail: { value: any; }; }} event
-   */
-  function handleSelectedFish(event) {
-    selectedFish = event.detail.value;
-  }
-
   let tools = [
     {
       name: "Visual Studio Code",
@@ -69,13 +61,25 @@
     },
   ];
 
-  let selectedTool = "";
+  /**
+   * @type {{ name: string; description: string; extensions: string; } | { name: string; description: string; extensions?: undefined; }}
+   */
+  let selectedTool;
+  let showInfo = false;
 
   /**
    * @param {{ name: string; description: string; extensions: string; } | { name: string; description: string; extensions?: undefined; }} tool
    */
   function toggleTool(tool) {
-    selectedTool = tool.name;
+    selectedTool = tool;
+    showInfo = true;
+  }
+
+  /**
+   * @param {{ detail: { value: any; }; }} event
+   */
+  function handleSelectedFish(event) {
+    selectedFish = event.detail.value;
   }
 </script>
 
@@ -137,15 +141,26 @@
     >
       <nav class="[ glass-effect shadow-sm ]">
         {#if selectedTool}
-          {selectedTool}
+          {selectedTool.name}
         {:else}
           Apelle
         {/if}
       </nav>
 
-      <div class="flex gap-4 justify-center [ bg-stroke ]">
+      {#if showInfo}
+        <div class="bg-canvas max-w-3xl mx-6 md:mx-auto min-h-[10rem]">
+          <div class="[ flex flex-col px-8 py-6 ]">
+            <span>{selectedTool.description}</span>
+            {#if selectedTool.extensions}
+              <span>Extensions: {selectedTool.extensions}</span>
+            {/if}
+          </div>
+        </div>
+      {/if}
+
+      <div class="flex flex-wrap gap-4 justify-center [ bg-pearl ]">
         {#each tools as tool (tool.name)}
-          <div class="justify-start">
+          <div class="">
             <button
               on:click={() => toggleTool(tool)}
               class="font-semibold bg-red-100"
@@ -153,12 +168,7 @@
               {tool.name}
             </button>
 
-            <img src={tool.icon_url} alt="" class="h-10"/>
-
-            <!-- <span>{tool.description}</span>
-        {#if tool.extensions}
-          <span>Extensions: {tool.extensions}</span>
-        {/if} -->
+            <!-- <img src={tool.icon_url} alt="" class="h-10" /> -->
           </div>
         {/each}
       </div>
