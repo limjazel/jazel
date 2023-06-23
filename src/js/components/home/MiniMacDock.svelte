@@ -28,18 +28,22 @@
     class="[ mb-1 pt-1 pb-3 px-1 ] [ glass-effect rounded-xl ] [ flex flex-wrap gap-1 justify-center ]"
   >
     {#each tools as tool (tool.name)}
-      <div class="[ flex flex-col items-center ]">
+      <div class="group [ flex flex-col items-center ]">
+        <span
+          class="[ absolute -top-11 py-1 px-2 z-10 ] [ hidden group-hover:block ]
+                 [ glass-effect rounded ] [ text-sm whitespace-nowrap ]"
+        >
+          {#if tool.name !== "Visual Studio Code"}
+            {tool.name}
+          {:else}
+            VS Code
+          {/if}
+        </span>
+
         <button
           on:click={() => toggle(tool)}
-          class="group [ flex flex-col items-center ]"
+          class="[ flex flex-col items-center ]"
         >
-          <span
-            class="[ absolute -top-11 py-1 px-2 ] [ hidden group-hover:block ]
-                   [ glass-effect rounded ] [ text-sm whitespace-nowrap ]"
-          >
-            {tool.name}
-          </span>
-
           <span>
             <img src={tool.icon_url} alt="" class="[ h-12 ]" />
           </span>
