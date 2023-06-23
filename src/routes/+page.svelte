@@ -137,13 +137,23 @@
     </div>
 
     <div
-      class="[ mt-6 ] [ flex flex-col justify-between ] bg-purple-100 min-h-[40rem]"
+      class="[ mt-6 ] [ flex flex-col justify-between ] [ bg-purple-100 border-8 border-neutral ] [ min-h-[40rem] shadow-md rounded-md overflow-hidden ]"
     >
-      <nav class="[ glass-effect shadow-sm ]">
+      <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 ]">
         {#if selectedTool}
-          {selectedTool.name}
+          <span class="[ flex items-center gap-4 ]">
+            <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
+            <span class="[ font-semibold text-sm relative top-0.5 ]">
+              {selectedTool.name}
+            </span>
+          </span>
         {:else}
-          Apelle
+          <span class="[ flex items-center gap-4 ]">
+            <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
+            <span class="[ font-semibold text-sm relative top-0.5 ]">
+              Apelle
+            </span>
+          </span>
         {/if}
       </nav>
 
