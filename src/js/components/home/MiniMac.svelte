@@ -1,7 +1,7 @@
 <script>
-  import Container from "../Button.svelte";
   import MiniMacDock from "./MiniMacDock.svelte";
   import MiniMacWindow from "./MiniMacWindow.svelte";
+  import Dropdown from "../Dropdown.svelte";
 
   let tools = [
     {
@@ -84,11 +84,11 @@
 </div>
 
 <div
-  class="[ mt-6 ] [ flex flex-col justify-between ]
+  class="[ mt-6 ] [ flex flex-col items-center justify-center ]
          [ bg-purple-100 border-8 border-neutral ]
          [ min-h-[40rem] shadow-md rounded-md overflow-hidden ]"
 >
-  <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 ]">
+  <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full absolute top-0 ]">
     {#if selectedTool}
       <span class="[ flex items-center gap-4 ]">
         <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
@@ -104,9 +104,31 @@
     {/if}
   </nav>
 
+  <div>
+    <Dropdown placement="bottom">
+      <svelte:fragment slot="trigger" let:toggleMenu>
+        <button on:click={toggleMenu} class="bg-red-200 p-4">
+          I am a foler
+        </button>
+      </svelte:fragment>
+
+      <div
+        slot="menu"
+        let:closeMenu
+        class=" bg-yellow-200 z-20 [ bg-pearl ]
+               [ rounded-lg shadow-lg overflow-hidden ]"
+      >
+        <button class="bg-orange-200" on:click={closeMenu}>close</button>
+        I am folder window
+      </div>
+    </Dropdown>
+  </div>
+
   {#if showInfo && selectedTool}
     <MiniMacWindow {selectedTool} on:close={() => (showInfo = false)} />
   {/if}
 
-  <MiniMacDock {tools} {selectedTool} {showInfo} on:toggle={toggleTool} />
+  <div class="absolute bottom-0">
+    <MiniMacDock {tools} {selectedTool} {showInfo} on:toggle={toggleTool} />
+  </div>
 </div>

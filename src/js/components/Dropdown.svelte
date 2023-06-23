@@ -11,12 +11,14 @@
 
   export let placement = "bottom-start";
   export let middleware = [flip(), offset(4), shift({ padding: 4 })];
+  export { className as class };
 
   let open = false;
   let selected = "";
   let trigger;
   let menu;
   let cleanup;
+  let className = "";
 
   function toggleMenu() {
     updateMenuPosition();
@@ -59,14 +61,14 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div use:clickOutside on:click-outside={closeMenu} class="[ inline-block ]">
+<div use:clickOutside on:click-outside={closeMenu} class="c-dropdown">
   <div bind:this={trigger}>
     <slot name="trigger" {toggleMenu} {closeMenu} />
   </div>
 
   <nav
     bind:this={menu}
-    class="[ absolute z-10 ] [ grid grid-col max-w-[16rem] ] [ bg-canvas rounded mt-2 ]"
+    class="[ absolute z-10 ] [ grid grid-col max-w-[16rem] ] [ bg-canvas rounded mt-2 ] {className}"
     class:hidden={!open}
   >
     <slot name="menu" {toggleMenu} {closeMenu} />
