@@ -15,7 +15,7 @@
     {
       name: "Visual Studio Code",
       description:
-        "My current editor! Friendship ended with PHPStorm (I am broke), Sublime and Notepad++, now, VSCode is my best friend.",
+        "My current editor! Friendship ended with PHPStorm (I am broke), Sublime and Notepad++, now, VSCode is 🤝 my best friend.",
       extensions: "Prettier, Svelte for VS Code, Tailwind CSS Intellisense",
       icon_url: "src/images/logos/vscode.webp",
     },
@@ -35,13 +35,14 @@
     {
       name: "Figma",
       description:
-        "From doing process flows, mockups, prototypes, documents and doing basic photo editing. Figma has almost everything I need for the basic things in life.",
+        "Figma is a star 🤩. From doing process flows, mockups, prototypes, documents, vectors and doing basic photo editing. Figma has almost everything I need for the basic things in life.",
+      extensions: "Image Tracer, Feather Icons, Lorem Ipsum",
       icon_url: "src/images/logos/figma.webp",
     },
     {
       name: "Affinity Designer",
       description:
-        "Affinity Designer was introduced to me and I've been using it since!",
+        "Affinity Designer was introduced to me and I've been using it for work requiring fancier vectors!",
       icon_url: "src/images/logos/affinity_designer.webp",
     },
     {
@@ -59,13 +60,13 @@
     {
       name: "Alfred",
       description:
-        "A custom spotlight search for mac, makes looking for stuff easier and opening apps faster.",
+        "A custom spotlight search for mac, makes looking for stuff easier and opening apps faster. Makes me more productive (😉).",
       icon_url: "src/images/logos/alfred.webp",
     },
     {
       name: "iCloud",
       description:
-        "I mainly use iCloud for storing everything. But I still use Google drive.",
+        "Growing older made me realize there is never enough cloud storage even for a normal person like me. I mainly use iCloud for storing anything. I still use Google drive on some occassions especially for file sharing.",
       icon_url: "src/images/logos/icloud.webp",
     },
   ];
@@ -192,7 +193,7 @@
               <div
                 class="[ mt-10 flex flex-col gap-1 ] [ text-zinc-500 text-sm ]"
               >
-                <span class="[ font-medium ]">Extensions I use:</span>
+                <span class="[ font-medium ]">Plugins I use:</span>
                 <span>{selectedTool.extensions}</span>
               </div>
             {/if}
