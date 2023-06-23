@@ -16,48 +16,56 @@
       name: "Visual Studio Code",
       description: "My current editor, my friend and my enemy.",
       extensions: "Prettier, Svelte for VS Code, Tailwind CSS Intellisense",
+      icon_url: "src/images/logos/vscode.webp",
     },
     {
       name: "iTerm2",
       description:
         "I prefer the terminal to be separated from the code editor when I work, and the default one mac has isn't too kind to the eyes, and here we are.",
+      icon_url: "src/images/logos/iTerm.webp",
     },
     {
       name: "Arc Browser",
       description:
         "I tried it out and stuck with it because of how clean it looks when the sidebar is hidden. I still use both Safari and Firefox though.",
       extensions: "WhatFont, ColorZilla, Awesome Screenshot",
-      icon_url: "src/images/logos/arc.svg",
+      icon_url: "src/images/logos/arc.webp",
     },
     {
       name: "Figma",
       description:
         "From doing process flows, mockups, prototypes, documents and doing basic photo editing. Figma has almost everything I need for the basic things in life.",
+      icon_url: "src/images/logos/figma.webp",
     },
     {
       name: "Affinity Designer",
       description:
         "Affinity Designer was introduced to me and I've been using it since!",
+      icon_url: "src/images/logos/affinity_designer.webp",
     },
     {
       name: "Procreate",
       description:
         "For sketching out ideas and making illustrations, Procreate is my favorite hobby buddy. (So far).",
+      icon_url: "src/images/logos/procreate.webp",
     },
     {
       name: "Adobe Photoshop",
       description:
         "I rarely do photo editing anymore, but Photoshop is still my go-to and what I'm comfortable with.",
+      icon_url: "src/images/logos/adobe_photoshop.webp",
     },
     {
       name: "Alfred",
       description:
         "A custom spotlight search for mac, makes looking for stuff easier and opening apps faster.",
+      icon_url: "src/images/logos/alfred.webp",
     },
     {
       name: "iCloud",
       description:
         "I mainly use iCloud for storing everything. But I still use Google drive.",
+      icon_url: "src/images/logos/icloud.webp",
     },
   ];
 
@@ -168,19 +176,38 @@
         </div>
       {/if}
 
-      <div class="flex flex-wrap gap-4 justify-center [ bg-pearl ]">
-        {#each tools as tool (tool.name)}
-          <div class="">
-            <button
-              on:click={() => toggleTool(tool)}
-              class="font-semibold bg-red-100"
-            >
-              {tool.name}
-            </button>
+      <div class="[ flex justify-center ] [ ]">
+        <div
+          class="[ mb-1 pt-1 pb-3 px-1 ] [ glass-effect rounded-xl ] [ flex flex-wrap gap-1 justify-center ]"
+        >
+          {#each tools as tool (tool.name)}
+            <div class="[ flex flex-col items-center ]">
+              <button
+                on:click={() => toggleTool(tool)}
+                class="group [ flex flex-col items-center ]"
+              >
+                <span
+                  class="[ absolute -top-11 py-1 px-2 ] [ hidden group-hover:block ]
+                         [ glass-effect rounded ] [ text-sm whitespace-nowrap ]"
+                >
+                  {tool.name}
+                </span>
 
-            <!-- <img src={tool.icon_url} alt="" class="h-10" /> -->
-          </div>
-        {/each}
+                <span>
+                  <img src={tool.icon_url} alt="" class="[ h-12 ]" />
+                </span>
+              </button>
+
+              <span
+                class:block={selectedTool === tool}
+                class:hidden={selectedTool !== tool}
+                class="[ mt-1 h-1 w-1 bg-stroke rounded-full ] [ absolute -bottom-2 ]"
+              >
+                <span class="[ sr-only ]">selected app indicator</span>
+              </span>
+            </div>
+          {/each}
+        </div>
       </div>
     </div>
   </Container>
