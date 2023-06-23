@@ -1,7 +1,7 @@
 <script>
   import MiniMacDock from "./MiniMacDock.svelte";
   import MiniMacWindow from "./MiniMacWindow.svelte";
-  import Folder from "../Folder.svelte";
+  import DesktopFolder from "./DesktopFolder.svelte";
 
   let tools = [
     {
@@ -86,10 +86,10 @@
 <div
   class="[ mt-6 ] [ flex flex-col items-center justify-between ]
          [ bg-mac bg-cover bg-center border-8 border-neutral ]
-         [ min-h-[42rem] shadow-md rounded-md overflow-hidden ]"
+         [ min-h-[48rem] shadow-md rounded-md overflow-hidden ]"
 >
   <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full ]">
-    {#if selectedTool}
+    {#if selectedTool && showInfo}
       <span class="[ flex items-center gap-4 ]">
         <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
         <span class="[ font-semibold text-sm relative top-0.5 ]">
@@ -105,37 +105,7 @@
   </nav>
 
   <div class="[ absolute top-16 right-6 ]">
-    <Folder>
-      <svelte:fragment slot="folder" let:openFolder>
-        <button on:click={openFolder} class="bg-red-200 p-4">
-          I am a foler
-        </button>
-      </svelte:fragment>
-
-      <div
-        slot="folderWindow"
-        let:closeFolder
-        class="[ z-20 md:-left-24 flex flex-col min-w-[16rem] md:min-w-[24rem] ]
-               [ rounded-lg shadow-lg overflow-hidden ]"
-      >
-        <header class="[ p-2 flex items-center bg-zinc-200 ]">
-          <button
-            on:click={closeFolder}
-            class="[ h-4 w-4 bg-red-400 rounded-full ]"
-          >
-            <i
-              class="fa-solid fa-xmark [ text-xs text-red-700 relative -top-1 ]"
-              aria-hidden="true"
-            />
-            <span class="[ sr-only ]">Close tool info</span>
-          </button>
-        </header>
-
-        <div class="[ flex flex-col px-10 pt-10 pb-12 ] [ bg-canvas ]">
-          <span> am folder window</span>
-        </div>
-      </div>
-    </Folder>
+    <DesktopFolder />
   </div>
 
   {#if showInfo && selectedTool}
