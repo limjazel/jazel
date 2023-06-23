@@ -1,7 +1,7 @@
 <script>
   import MiniMacDock from "./MiniMacDock.svelte";
   import MiniMacWindow from "./MiniMacWindow.svelte";
-  import Dropdown from "../Dropdown.svelte";
+  import Folder from "../Folder.svelte";
 
   let tools = [
     {
@@ -84,11 +84,11 @@
 </div>
 
 <div
-  class="[ mt-6 ] [ flex flex-col items-center justify-center ]
+  class="[ mt-6 ] [ flex flex-col items-center justify-between ]
          [ bg-purple-100 border-8 border-neutral ]
-         [ min-h-[40rem] shadow-md rounded-md overflow-hidden ]"
+         [ min-h-[42rem] shadow-md rounded-md overflow-hidden ]"
 >
-  <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full absolute top-0 ]">
+  <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full ]">
     {#if selectedTool}
       <span class="[ flex items-center gap-4 ]">
         <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
@@ -104,31 +104,45 @@
     {/if}
   </nav>
 
-  <div>
-    <Dropdown placement="bottom">
-      <svelte:fragment slot="trigger" let:toggleMenu>
-        <button on:click={toggleMenu} class="bg-red-200 p-4">
+  <div class="[ absolute top-16 right-6 ]">
+    <Folder>
+      <svelte:fragment slot="folder" let:openFolder>
+        <button on:click={openFolder} class="bg-red-200 p-4">
           I am a foler
         </button>
       </svelte:fragment>
 
       <div
-        slot="menu"
-        let:closeMenu
-        class=" bg-yellow-200 z-20 [ bg-pearl ]
+        slot="folderWindow"
+        let:closeFolder
+        class="[ z-20 md:-left-24 flex flex-col min-w-[16rem] md:min-w-[24rem] ]
                [ rounded-lg shadow-lg overflow-hidden ]"
       >
-        <button class="bg-orange-200" on:click={closeMenu}>close</button>
-        I am folder window
+        <header class="[ p-2 flex items-center bg-zinc-200 ]">
+          <button
+            on:click={closeFolder}
+            class="[ h-4 w-4 bg-red-400 rounded-full ]"
+          >
+            <i
+              class="fa-solid fa-xmark [ text-xs text-red-700 relative -top-1 ]"
+              aria-hidden="true"
+            />
+            <span class="[ sr-only ]">Close tool info</span>
+          </button>
+        </header>
+
+        <div class="[ flex flex-col px-10 pt-10 pb-12 ] [ bg-canvas ]">
+          <span> am folder window</span>
+        </div>
       </div>
-    </Dropdown>
+    </Folder>
   </div>
 
   {#if showInfo && selectedTool}
     <MiniMacWindow {selectedTool} on:close={() => (showInfo = false)} />
   {/if}
 
-  <div class="absolute bottom-0">
+  <div>
     <MiniMacDock {tools} {selectedTool} {showInfo} on:toggle={toggleTool} />
   </div>
 </div>
