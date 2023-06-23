@@ -18,6 +18,65 @@
   function handleSelectedFish(event) {
     selectedFish = event.detail.value;
   }
+
+  let tools = [
+    {
+      name: "Visual Studio Code",
+      description: "My current editor, my friend and my enemy.",
+      extensions: "Prettier, Svelte for VS Code, Tailwind CSS Intellisense",
+    },
+    {
+      name: "iTerm2",
+      description:
+        "I prefer the terminal to be separated from the code editor when I work, and the default one mac has isn't too kind to the eyes, and here we are.",
+    },
+    {
+      name: "Arc Browser",
+      description:
+        "I tried it out and stuck with it because of how clean it looks when the sidebar is hidden. I still use both Safari and Firefox though.",
+      extensions: "WhatFont, ColorZilla, Awesome Screenshot",
+      icon_url: "src/images/logos/arc.svg",
+    },
+    {
+      name: "Figma",
+      description:
+        "From doing process flows, mockups, prototypes, documents and doing basic photo editing. Figma has almost everything I need for the basic things in life.",
+    },
+    {
+      name: "Affinity Designer",
+      description:
+        "Affinity Designer was introduced to me and I've been using it since!",
+    },
+    {
+      name: "Procreate",
+      description:
+        "For sketching out ideas and making illustrations, Procreate is my favorite hobby buddy. (So far).",
+    },
+    {
+      name: "Adobe Photoshop",
+      description:
+        "I rarely do photo editing anymore, but Photoshop is still my go-to and what I'm comfortable with.",
+    },
+    {
+      name: "Alfred",
+      description:
+        "A custom spotlight search for mac, makes looking for stuff easier and opening apps faster.",
+    },
+    {
+      name: "iCloud",
+      description:
+        "I mainly use iCloud for storing everything. But I still use Google drive.",
+    },
+  ];
+
+  let selectedTool = "";
+
+  /**
+   * @param {{ name: string; description: string; extensions: string; } | { name: string; description: string; extensions?: undefined; }} tool
+   */
+  function toggleTool(tool) {
+    selectedTool = tool.name;
+  }
 </script>
 
 <!-- banner -->
@@ -61,6 +120,47 @@
 
       <div class="[ col-span-1 lg:col-span-4 ] flex">
         <Search {data} on:select={handleSelectedFish} />
+      </div>
+    </div>
+  </Container>
+</section>
+
+<section class="">
+  <Container>
+    <div class="max-w-2xl px-6 md:px-8">
+      <h1 class="text-4xl">/uses</h1>
+      <p>What i use on a thing for a thing! Using a tool for tooling</p>
+    </div>
+
+    <div
+      class="[ mt-6 ] [ flex flex-col justify-between ] bg-purple-100 min-h-[40rem]"
+    >
+      <nav class="[ glass-effect shadow-sm ]">
+        {#if selectedTool}
+          {selectedTool}
+        {:else}
+          Apelle
+        {/if}
+      </nav>
+
+      <div class="flex gap-4 justify-center [ bg-stroke ]">
+        {#each tools as tool (tool.name)}
+          <div class="justify-start">
+            <button
+              on:click={() => toggleTool(tool)}
+              class="font-semibold bg-red-100"
+            >
+              {tool.name}
+            </button>
+
+            <img src={tool.icon_url} alt="" class="h-10"/>
+
+            <!-- <span>{tool.description}</span>
+        {#if tool.extensions}
+          <span>Extensions: {tool.extensions}</span>
+        {/if} -->
+          </div>
+        {/each}
       </div>
     </div>
   </Container>
