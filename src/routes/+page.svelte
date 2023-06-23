@@ -14,14 +14,15 @@
   let tools = [
     {
       name: "Visual Studio Code",
-      description: "My current editor, my friend and my enemy.",
+      description:
+        "My current editor! Friendship ended with PHPStorm (I am broke), Sublime and Notepad++, now, VSCode is my best friend.",
       extensions: "Prettier, Svelte for VS Code, Tailwind CSS Intellisense",
       icon_url: "src/images/logos/vscode.webp",
     },
     {
       name: "iTerm2",
       description:
-        "I prefer the terminal to be separated from the code editor when I work, and the default one mac has isn't too kind to the eyes, and here we are.",
+        "I prefer the terminal to be separated from the code editor when I work, and the default one mac has isn't too kind to the eyes, also recommended by a friend, iTerm has since been a staple tool I regulary use.",
       icon_url: "src/images/logos/iTerm.webp",
     },
     {
@@ -72,8 +73,8 @@
   /**
    * @type {{ name: string; description: string; extensions: string; } | { name: string; description: string; extensions?: undefined; }}
    */
-  let selectedTool;
-  let showInfo = false;
+  let selectedTool = tools[0];
+  let showInfo = true;
 
   /**
    * @param {{ name: string; description: string; extensions: string; } | { name: string; description: string; extensions?: undefined; }} tool
@@ -165,18 +166,41 @@
         {/if}
       </nav>
 
-      {#if showInfo}
-        <div class="bg-canvas max-w-3xl mx-6 md:mx-auto min-h-[10rem]">
-          <div class="[ flex flex-col px-8 py-6 ]">
-            <span>{selectedTool.description}</span>
+      {#if showInfo && selectedTool}
+        <div
+          class="[ mx-6 md:mx-auto ] [ bg-pearl min-h-[16rem] max-w-[40rem] ]
+             [ rounded-lg shadow-lg overflow-hidden ]"
+        >
+          <header class="[ p-2 flex items-center bg-zinc-200 ]">
+            <button
+              on:click={() => (showInfo = false)}
+              class="[ h-4 w-4 bg-red-400 rounded-full ]"
+            >
+              <i
+                class="fa-solid fa-xmark [ text-xs text-red-700 relative -top-1 ]"
+                aria-hidden="true"
+              />
+              <span class="[ sr-only ]">Close tool info</span>
+            </button>
+          </header>
+
+          <div class="[ flex flex-col px-10 pt-10 pb-12 ]">
+            <h3 class="[ text-xl tracking-tight ]">{selectedTool.name}</h3>
+            <span class="[ mt-1 ]">{selectedTool.description}</span>
+
             {#if selectedTool.extensions}
-              <span>Extensions: {selectedTool.extensions}</span>
+              <div
+                class="[ mt-10 flex flex-col gap-1 ] [ text-zinc-500 text-sm ]"
+              >
+                <span class="[ font-medium ]">Extensions I use:</span>
+                <span>{selectedTool.extensions}</span>
+              </div>
             {/if}
           </div>
         </div>
       {/if}
 
-      <div class="[ flex justify-center ] [ ]">
+      <div class="[ flex justify-center ]">
         <div
           class="[ mb-1 pt-1 pb-3 px-1 ] [ glass-effect rounded-xl ] [ flex flex-wrap gap-1 justify-center ]"
         >
