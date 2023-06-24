@@ -26,27 +26,27 @@
 </svelte:head>
 
 <!-- banner -->
-<Container class="[ py-20 md:pt-4 ]">
-  <div
-    class="[ flex flex-wrap md:flex-nowrap items-center lg:justify-between gap-10 min-h-[60vh] ]"
-  >
-    <div class="[ max-w-2xl ]">
-      <h1 class="[ text-6xl ]">Hello! I'm Jazel.</h1>
+<Container class="[ py-20 md:pb-24 md:pt-14 ]">
+  <div class="[ grid grid-cols-5 gap-10 items-center min-h-[60vh] ]">
+    <div class="[ col-span-5 lg:col-span-3 ]">
+      <img
+        src="/images/banner-lg-cropped.gif"
+        alt="gif banner"
+        class="[ w-full pr-0 px-0 md:px-10 pb-10 lg:pb-0 lg:pr-12 ]"
+      />
+      <span class="[ sr-only ]">
+        An illustration of a lady with short black hair and bright neon green
+        sweater sitting on chair with her other arm resting on the table. The
+        table has a monitor, keyboard and a mouse.
+      </span>
+    </div>
+
+    <div class="[ col-span-5 lg:col-span-2 ]">
+      <h1 class="[ text-6xl lg:-mt-10 ]">Hello! I'm Jazel.</h1>
       <p class="[ mt-4 text-xl leading-relaxed ]">
         I am a designer with experience on building web apps. I enjoy doing
         illustrations from time to time!
       </p>
-    </div>
-
-    <div class="[ max-w-2xl ]">
-      <img src="/images/sheep-square.png" alt="sample banner" />
-      <span class="[ sr-only ]">
-        An illustration of a black headed sheep wearing a sweater and pants
-        doing different things. A sheep angrily writing. A sheep sititng on a
-        stool. A sheep jumping on two legs. A glaring sheep. A sheep staring at
-        the ceiling while drinking a cup of coffee. And a sheep lying on the
-        floor with a pool of tears.
-      </span>
     </div>
   </div>
 </Container>
