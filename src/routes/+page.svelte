@@ -28,7 +28,7 @@
 <!-- banner -->
 <Container class="[ py-20 md:pt-4 ]">
   <div
-    class="[ flex flex-wrap items-center lg:justify-between gap-10 min-h-[60vh] ]"
+    class="[ flex flex-wrap md:flex-nowrap items-center lg:justify-between gap-10 min-h-[60vh] ]"
   >
     <div class="[ max-w-2xl ]">
       <h1 class="[ text-6xl ]">Hello! I'm Jazel.</h1>
@@ -38,11 +38,16 @@
       </p>
     </div>
 
-    <img
-      src="https://placehold.co/400"
-      alt="sample banner"
-      class="[ mx-auto lg:mx-0 ]"
-    />
+    <div class="[ max-w-2xl ]">
+      <img src="/images/sheep-square.png" alt="sample banner" />
+      <span class="[ sr-only ]">
+        An illustration of a black headed sheep wearing a sweater and pants
+        doing different things. A sheep angrily writing. A sheep sititng on a
+        stool. A sheep jumping on two legs. A glaring sheep. A sheep staring at
+        the ceiling while drinking a cup of coffee. And a sheep lying on the
+        floor with a pool of tears.
+      </span>
+    </div>
   </div>
 </Container>
 
@@ -80,8 +85,7 @@
 
         <p class="[ mt-3 text-lg text-canvas ]">
           I tried to copy the appearance of my screen and show some of the
-          software I use on a regular when working! I picked the ones I use
-          most.
+          software I use when working! I picked the ones I use most.
         </p>
       </div>
 
