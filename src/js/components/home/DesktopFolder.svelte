@@ -66,7 +66,10 @@
 
         <div class="[ mt-4 w-full ]">
           <span class="[ text-sm text-zinc-400 font-medium ]">Cats</span>
-          <nav class="[ mt-1 flex flex-col ]">
+          <nav
+            class="[ mt-1 flex flex-col ]"
+            aria-label="Navigation for Images folder"
+          >
             {#each cats as cat}
               <button
                 type="button"

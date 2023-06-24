@@ -28,11 +28,11 @@
     <slot name="folder" {openFolder} {closeFolder} />
   </div>
 
-  <nav
+  <div
     use:floatingContent
     class="[ absolute ] [ grid grid-col ] [ rounded mt-2 ] {className}"
     class:hidden={!open}
   >
     <slot name="folderWindow" {openFolder} {closeFolder} />
-  </nav>
+  </div>
 </div>

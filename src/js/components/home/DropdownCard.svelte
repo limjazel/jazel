@@ -46,6 +46,7 @@
         slot="menu"
         let:closeMenu
         class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke/95 ]"
+        aria-label="sample dropdown options"
       >
         {#each options as option (option.id)}
           <div>

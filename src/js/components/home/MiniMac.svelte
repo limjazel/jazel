@@ -83,7 +83,7 @@
          [ bg-mac bg-cover bg-center border-8 border-neutral ]
          [ min-h-[48rem] shadow-md rounded-md overflow-hidden ]"
 >
-  <nav class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full ]">
+  <div class="[ glass-effect shadow-sm ] [ py-1.5 px-5 w-full ]">
     {#if selectedTool && showInfo}
       <span class="[ flex items-center gap-4 ]">
         <i class="fa-brands fa-apple [ text-lg ]" aria-hidden="true" />
@@ -97,7 +97,7 @@
         <span class="[ font-semibold text-sm relative top-0.5 ]"> Apelle </span>
       </span>
     {/if}
-  </nav>
+  </div>
 
   <div class="[ absolute top-16 right-3 md:right-6 ]">
     <DesktopFolder />

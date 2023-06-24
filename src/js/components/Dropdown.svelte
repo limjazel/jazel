@@ -66,11 +66,11 @@
     <slot name="trigger" {toggleMenu} {closeMenu} />
   </div>
 
-  <nav
+  <div
     bind:this={menu}
     class="[ absolute z-10 ] [ grid grid-col max-w-[16rem] ] [ rounded mt-2 ] {className}"
     class:hidden={!open}
   >
     <slot name="menu" {toggleMenu} {closeMenu} />
-  </nav>
+  </div>
 </div>

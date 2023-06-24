@@ -3,7 +3,10 @@
 </script>
 
 <header>
-  <nav class="[ py-4 md:py-6 flex flex-wrap items-center gap-x-10 ]">
+  <nav
+    aria-label="primary navigation"
+    class="[ py-4 md:py-6 flex flex-wrap items-center gap-x-10 ]"
+  >
     <a href="/">
       <span class="sr-only">go to home</span>
       <span class="font-heading text-3xl tracking-tight">Jazel Lim</span>
