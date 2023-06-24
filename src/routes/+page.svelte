@@ -67,7 +67,7 @@
   </Container>
 </section>
 
-<section class="">
+<section class="mt-20">
   <Container>
     <MiniMac />
   </Container>
