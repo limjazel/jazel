@@ -23,7 +23,7 @@
     includeScore: true,
     shouldSort: true,
     threshold: 0.1,
-    keys: ["name", "availability.location", "availability.rarity" ],
+    keys: ["name", "availability.location", "availability.rarity"],
   });
 
   function handleInput() {
@@ -66,7 +66,7 @@
   </div>
 
   <div
-    class="[ py-4 px-1 ] [ grid grid-cols-3 md:grid-cols-5 gap-4 ] [ h-[32rem] overflow-y-auto ]"
+    class="[ py-4 px-1 ] [ grid grid-cols-2 md:grid-cols-5 gap-4 ] grid-flow-row auto-rows-max [ h-[32rem] overflow-y-auto ]"
   >
     {#each results as fish (fish.id)}
       <div
@@ -82,7 +82,7 @@
           class="[ hover:bg-neutral/50 ]"
         >
           <div class="[ flex flex-col items-center ]">
-            <div class="[ px-4 py-2 md:px-3 ]">
+            <div class="[ md:px-4 py-2 md:px-3 ]">
               <img src={fish.icon_uri} alt={fish.name} />
             </div>
             <span class="[ text-sm pb-4 md:pb-2 ]">{fish.name}</span>
