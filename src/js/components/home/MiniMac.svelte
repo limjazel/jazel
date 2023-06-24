@@ -78,11 +78,6 @@
   }
 </script>
 
-<div class="[ max-w-2xl px-6 md:px-8 ]">
-  <h1 class="text-4xl">/uses</h1>
-  <p class="[ mt-2 ]">What i use on a thing for a thing! Using a tool for tooling</p>
-</div>
-
 <div
   class="[ mt-12 ] [ flex flex-col items-center justify-between ]
          [ bg-mac bg-cover bg-center border-8 border-neutral ]

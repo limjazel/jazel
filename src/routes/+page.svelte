@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Jazel Lim | Home</title>
+  <title>Jazel Lim | Home</title>
 </svelte:head>
 
 <!-- banner -->
@@ -45,60 +45,79 @@
   </div>
 </Container>
 
-<section>
-  <Container>
-    <div class="max-w-2xl px-6 md:px-8">
-      <h1 class="text-4xl">A tiny search library! Waoaw!</h1>
+<div class="[ py-40 bg-stroke ]">
+  <section class="[ bg-stroke pb-18 ]">
+    <Container>
+      <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
+        <h1 class="[ text-4xl text-accent ]">A searchable fish database</h1>
 
-      <p class="mt-3 text-lg">
-        One of the things I built quite a few times is a searchable library.
-      </p>
-      <p class="text-lg">
-        Using ACNH API (v1) for fish and fuse.js, here's a simple searchable
-        wiki for the water creatures in Animal Crossing (New Horizons).
-      </p>
-    </div>
-
-    <div class="[ mt-14 grid lg:grid-cols-6 gap-6 ] min-h-[40rem]">
-      <div class="[ col-span-1 lg:col-span-2 ]">
-        <FishCard {selectedFish} />
+        <p class="[ mt-3 text-lg text-canvas ]">
+          One of the things I built quite a few times is a searchable library.
+        </p>
+        <p class="[ text-lg text-canvas ]">
+          Using ACNH API (v1) for fish and fuse.js, here's a simple searchable
+          wiki for the water creatures in Animal Crossing (New Horizons).
+        </p>
       </div>
 
-      <div class="[ col-span-1 lg:col-span-4 ] flex">
-        <Search {data} on:select={handleSelectedFish} />
+      <div class="[ mt-14 grid lg:grid-cols-6 gap-6 ] min-h-[40rem]">
+        <div class="[ col-span-1 lg:col-span-2 ] [ rounded-lg shadow-lg ]">
+          <FishCard {selectedFish} />
+        </div>
+
+        <div class="[ col-span-1 lg:col-span-4 flex ] [ rounded-lg shadow-lg ]">
+          <Search {data} on:select={handleSelectedFish} />
+        </div>
       </div>
-    </div>
-  </Container>
-</section>
+    </Container>
+  </section>
 
-<section class="mt-20">
-  <Container>
-    <MiniMac />
-  </Container>
-</section>
+  <section class="[ bg-stroke py-20 ]">
+    <Container>
+      <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
+        <h1 class="[ text-4xl text-accent ]">Uses</h1>
 
-<section class="[ py-20 ]">
-  <Container>
-    <h1 class="[ text-5xl ]">I am a title</h1>
-
-    <div class="[ mt-10 grid gap-6 grid-cols-3 ]">
-      <div class="col-span-3">
-        <ButtonCard />
-      </div>
-
-      <div class="[ col-span-3 lg:col-span-1 ] [ flex items-stretch ]">
-        <LinkCard />
+        <p class="[ mt-3 text-lg text-canvas ]">
+          I tried to copy the appearance of my screen and show some of the
+          software I use on a regular when working! I picked the ones I use
+          most.
+        </p>
       </div>
 
-      <div class="col-span-3 lg:col-span-2 grid gap-6">
-        <DropdownCard />
+      <MiniMac />
+    </Container>
+  </section>
 
-        <InputCard />
+  <section class="[ py-20 ]">
+    <Container>
+      <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
+        <h1 class="[ text-4xl text-accent ]">Mini component library</h1>
+
+        <p class="[ mt-3 text-lg text-canvas ]">
+          A robust house is built with good foundation, so I worked on a few
+          components before working on everything else on this website.
+        </p>
       </div>
 
-      <div class="[ col-span-3 ]">
-        <CopyToClipboardCard />
+      <div class="[ mt-10 grid gap-6 grid-cols-3 ]">
+        <div class="col-span-3">
+          <ButtonCard />
+        </div>
+
+        <div class="[ col-span-3 lg:col-span-1 ] [ flex items-stretch ]">
+          <LinkCard />
+        </div>
+
+        <div class="col-span-3 lg:col-span-2 grid gap-6">
+          <DropdownCard />
+
+          <InputCard />
+        </div>
+
+        <div class="[ col-span-3 ]">
+          <CopyToClipboardCard />
+        </div>
       </div>
-    </div>
-  </Container>
-</section>
+    </Container>
+  </section>
+</div>
