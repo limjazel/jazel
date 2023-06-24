@@ -4,10 +4,9 @@
   import Container from "../js/components/Container.svelte";
   import AppFooter from "../js/layouts/AppFooter.svelte";
   import AppHeader from "../js/layouts/AppHeader.svelte";
-  import Page from "../js/layouts/Page.svelte";
 </script>
 
-<Container>
+<Container class="[ py-6 ]">
   <AppHeader />
 </Container>
 

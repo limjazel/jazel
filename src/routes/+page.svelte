@@ -26,14 +26,15 @@
 </svelte:head>
 
 <!-- banner -->
-<Container>
-  <div class="[ flex flex-wrap items-center lg:justify-between min-h-[60vh] ]">
-    <div class="[ max-w-2xl py-20 ]">
-      <h1 class="[ text-6xl ]">Hello! I am a sturgeon.</h1>
+<Container class="[ py-20 md:pt-4 ]">
+  <div
+    class="[ flex flex-wrap items-center lg:justify-between gap-10 min-h-[60vh] ]"
+  >
+    <div class="[ max-w-2xl ]">
+      <h1 class="[ text-6xl ]">Hello! I'm Jazel.</h1>
       <p class="[ mt-4 text-xl leading-relaxed ]">
-        I am a designer with experience on building web apps. I am a designer
-        with experience on building web apps.I am a designer with experience on
-        building web apps.
+        I am a designer with experience on building web apps. I enjoy doing
+        illustrations from time to time!
       </p>
     </div>
 
@@ -46,7 +47,7 @@
 </Container>
 
 <div class="[ py-40 bg-stroke ]">
-  <section class="[ bg-stroke pb-18 ]">
+  <section class="[ pb-18 ]">
     <Container>
       <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
         <h1 class="[ text-4xl text-accent ]">A searchable fish database</h1>
@@ -72,7 +73,7 @@
     </Container>
   </section>
 
-  <section class="[ bg-stroke pt-20 ]">
+  <section class="[ pt-20 ]">
     <Container>
       <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
         <h1 class="[ text-4xl text-accent ]">Uses</h1>

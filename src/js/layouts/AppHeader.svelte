@@ -7,14 +7,12 @@
     aria-label="primary navigation"
     class="[ py-4 md:py-6 flex flex-wrap items-center gap-x-10 ]"
   >
-    <a href="/">
-      <span class="sr-only">go to home</span>
-      <span class="font-heading text-3xl tracking-tight">Jazel Lim</span>
-    </a>
-
     <Link href="/">
-      <span>home</span>
+      <span class="sr-only">go to home</span>
+      <span class="font-heading text-3xl text-stroke tracking-tight">Jazel Lim</span>
     </Link>
+
+    <Link href="/">home</Link>
 
     <Link href="/design">design</Link>
   </nav>
