@@ -72,7 +72,7 @@
     </Container>
   </section>
 
-  <section class="[ bg-stroke py-20 ]">
+  <section class="[ bg-stroke pt-20 ]">
     <Container>
       <div class="[ mx-auto max-w-2xl px-6 md:px-8 ] [ text-center ]">
         <h1 class="[ text-4xl text-accent ]">Uses</h1>
