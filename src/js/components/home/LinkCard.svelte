@@ -1,6 +1,7 @@
 <script>
   import Link from "../Link.svelte";
   import Card from "../Card.svelte";
+  import SheepImage from "./SheepImage.svelte";
 </script>
 
 <Card
@@ -8,12 +9,22 @@
 >
   <div>
     <span class="[ text-sm font-medium relative -top-3 ]">Link</span>
-    <p class="[ text-shade relative -top-1 ]">
-      Same 'ol links.
-    </p>
+    <p class="[ text-shade relative -top-1 ]">Same 'ol links.</p>
   </div>
 
-  <div class="[ lg:mt-10 flex flex-col gap-y-4 ]">
+  <div class="[ flex flex-col gap-y-4 w-full ]">
+    <Link
+      href="https://en.wikipedia.org/wiki/Valais_Blacknose"
+      class="mb-4 mx-auto"
+    >
+      <div aria-hidden="true">
+        <SheepImage />
+        <span class="[ sr-only ]">
+          Opens link to Valais Blacknose sheep wikipedia page
+        </span>
+      </div>
+    </Link>
+
     <Link href="/design">I will go to design page</Link>
     <Link href="/design" external={true} class="[whitespace-nowrap ]">
       I will open design page in a new tab
