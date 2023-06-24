@@ -9,7 +9,7 @@
     shift,
   } from "@floating-ui/dom";
 
-  export let placement = "bottom-start";
+  export let placement = "bottom-end";
   export let middleware = [flip(), offset(4), shift({ padding: 4 })];
   export { className as class };
 

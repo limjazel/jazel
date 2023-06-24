@@ -4,11 +4,10 @@
 </script>
 
 <Card class="[ py-10 ]">
-  <span class="[ text-sm relative -top-2 ]">Buttons</span>
-  <p>Here is something about these buttons,</p>
+  <span class="[ text-sm font-medium relative -top-3 ]">Buttons</span>
 
   <div
-    class="[ mt-8 flex flex-wrap lg:flex-nowrap justify-center items-start gap-10 ]"
+    class="[ mt-6 md:mt-2 flex flex-wrap lg:flex-nowrap justify-center items-start gap-10 ]"
   >
     <div>
       <h1 class="[ mb-2 tracking-tight ]">Accent buttons</h1>

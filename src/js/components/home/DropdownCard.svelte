@@ -23,15 +23,15 @@
 
 <Card class="[ py-10 ] [ flex flex-wrap items-center justify-between gap-y-8 ]">
   <div class="[ max-w-lg ]">
-    <span class="[ text-sm relative -top-2 ]">Dropdown</span>
-    <p>
-      you can also close dropdown menu when you press escape key or click
+    <span class="[ text-sm font-medium relative -top-3 ]">Dropdown</span>
+    <p class="[ text-shade relative -top-1 ]">
+      You can also close dropdown menu when you press escape key or click
       outside the menu.
     </p>
   </div>
 
   <div>
-    <Dropdown>
+    <Dropdown placement="bottom-start">
       <svelte:fragment slot="trigger" let:toggleMenu>
         <Button on:click={toggleMenu}>
           {#if !selected}
@@ -45,7 +45,7 @@
       <nav
         slot="menu"
         let:closeMenu
-        class="[ px-6 py-5 min-w-[14rem] ] [ bg-stroke/95 ]"
+        class="[ px-6 py-5 min-w-[12rem] rounded ] [ bg-stroke/95 shadow-md ]"
         aria-label="sample dropdown options"
       >
         {#each options as option (option.id)}

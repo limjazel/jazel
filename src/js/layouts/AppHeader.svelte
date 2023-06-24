@@ -9,7 +9,7 @@
   >
     <Link href="/">
       <span class="sr-only">go to home</span>
-      <span class="font-heading text-3xl text-stroke tracking-tight">Jazel Lim</span>
+      <span class="font-heading text-3xl text-stroke tracking-tight italic">Jazel Lim</span>
     </Link>
 
     <Link href="/">home</Link>

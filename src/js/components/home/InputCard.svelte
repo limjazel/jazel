@@ -4,10 +4,9 @@
 </script>
 
 <Card class="[ py-10 ]">
-  <span class="[ text-sm relative -top-2 ]">Input</span>
-  <p>Here is something about these inputs,</p>
+  <span class="[ text-sm font-medium relative -top-3 ]">Input</span>
 
-  <div class="[ mt-10 grid md:grid-cols-2 gap-4 ]">
+  <div class="[ mt-6 grid md:grid-cols-2 gap-4 ]">
     <div>
       <label for="input" class="[ block mb-1 text-sm font-semibold ]">
         A normal input box
@@ -16,10 +15,7 @@
     </div>
 
     <div>
-      <label
-        for="readonly-input"
-        class="[ block mb-1 text-sm font-semibold ]"
-      >
+      <label for="readonly-input" class="[ block mb-1 text-sm font-semibold ]">
         A readonly input box
       </label>
       <Input
