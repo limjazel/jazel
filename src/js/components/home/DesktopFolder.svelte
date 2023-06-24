@@ -32,7 +32,7 @@
     slot="folderWindow"
     let:closeFolder
     class="[ md:-left-24 flex flex-col bg-canvas text-sm ]
-           [ min-w-[16rem] md:min-w-[24rem] min-h-[18rem] ]
+           [ min-w-[18rem] md:min-w-[32rem] min-h-[18rem] ]
            [ rounded-lg shadow-xl border border-zinc-300 overflow-hidden ]"
   >
     <div class="[ flex h-full ]">
@@ -57,7 +57,7 @@
               <button
                 type="button"
                 on:click={() => selectCat(cat)}
-                class="[ capitalize ]"
+                class="[ capitalize py-0.5 hover:bg-red-100 ]"
               >
                 {cat.name}
               </button>
