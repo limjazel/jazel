@@ -15,7 +15,7 @@
 
 <div
   class="[ mx-6 md:mx-auto ] [ bg-pearl min-h-[16rem] max-w-[40rem] ]
-         [ rounded-lg shadow-lg overflow-hidden ]"
+         [ rounded-lg shadow-xl border border-zinc-300 overflow-hidden ]"
 >
   <header class="[ p-2 flex items-center bg-zinc-200 ]">
     <button on:click={close} class="[ h-4 w-4 bg-red-400 rounded-full ]">

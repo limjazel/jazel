@@ -57,7 +57,7 @@
 
   <nav
     bind:this={folderWindow}
-    class="[ absolute z-10 ] [ grid grid-col ] [ rounded mt-2 ] {className}"
+    class="[ absolute ] [ grid grid-col ] [ rounded mt-2 ] {className}"
     class:hidden={!open}
   >
     <slot name="folderWindow" {openFolder} {closeFolder} />

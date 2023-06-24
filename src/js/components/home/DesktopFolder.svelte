@@ -1,5 +1,17 @@
 <script>
   import Folder from "../Folder.svelte";
+
+  let cats = [
+    { name: "ollie", image_url: "src/images/cats/ollie.jpeg" },
+    { name: "lemon", image_url: "src/images/cats/lemon.jpeg" },
+    { name: "fish", image_url: "src/images/cats/fish.jpeg" },
+  ];
+
+  let selectedCat = cats[0];
+
+  function selectCat(cat) {
+    selectedCat = cat;
+  }
 </script>
 
 <Folder>
@@ -19,7 +31,7 @@
   <div
     slot="folderWindow"
     let:closeFolder
-    class="[ z-20 md:-left-24 flex flex-col bg-canvas text-sm ] 
+    class="[ md:-left-24 flex flex-col bg-canvas text-sm ]
            [ min-w-[16rem] md:min-w-[24rem] min-h-[18rem] ]
            [ rounded-lg shadow-xl border border-zinc-300 overflow-hidden ]"
   >
@@ -41,15 +53,31 @@
         <div class="[ mt-4 ]">
           <span class="[ text-sm text-zinc-400 font-medium ]">Cats</span>
           <nav class="[ mt-1 flex flex-col items-start ]">
-            <button>Ollie</button>
-            <button>Lemon</button>
-            <button>Fish</button>
+            {#each cats as cat}
+              <button
+                type="button"
+                on:click={() => selectCat(cat)}
+                class="[ capitalize ]"
+              >
+                {cat.name}
+              </button>
+            {/each}
           </nav>
         </div>
       </aside>
 
-      <div class="[ flex flex-col px-10 pt-10 pb-12 ] [ w-full ]">
-        <span> am folder window</span>
+      <div class="[ flex flex-col items-center px-8 pt-8 pb-10 ]">
+        {#if selectedCat}
+          <div class="[ flex border-4 border-pearl shadow-md ]">
+            <img
+              src={selectedCat.image_url}
+              alt={selectedCat.name}
+              class="[ w-full object-cover ]"
+            />
+          </div>
+
+          <span class="[ mt-2 ]">{selectedCat.name}.jpeg</span>
+        {/if}
       </div>
     </div>
   </div>

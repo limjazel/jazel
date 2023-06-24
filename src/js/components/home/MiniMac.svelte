@@ -104,7 +104,7 @@
     {/if}
   </nav>
 
-  <div class="[ absolute top-16 right-6 ]">
+  <div class="[ absolute top-16 right-3 md:right-6 ]">
     <DesktopFolder />
   </div>
 
