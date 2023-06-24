@@ -41,9 +41,9 @@
       </span>
     </div>
 
-    <div class="[ col-span-5 lg:col-span-2 ]">
-      <h1 class="[ text-6xl lg:-mt-10 ]">Hello! I'm Jazel.</h1>
-      <p class="[ mt-4 text-xl leading-relaxed ]">
+    <div class="[ col-span-5 lg:col-span-2 max-w-xl ]">
+      <h1 class="[ text-6xl lg:-mt-10 tracking-tightest ]">Hello! I'm Jazel.</h1>
+      <p class="[ mt-2 text-xl leading-relaxed ]">
         I am a designer with experience on building web apps. I enjoy doing
         illustrations from time to time!
       </p>

@@ -16,6 +16,9 @@ export default {
       },
       backgroundImage: {
         mac: "url('/images/monterey.jpeg')"
+      },
+      letterSpacing: {
+        tightest: '-0.24rem'
       }
     },  
   },

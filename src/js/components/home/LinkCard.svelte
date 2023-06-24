@@ -19,10 +19,11 @@
     >
       <div aria-hidden="true">
         <SheepImage />
-        <span class="[ sr-only ]">
-          Opens link to Valais Blacknose sheep wikipedia page
-        </span>
       </div>
+
+      <span class="[ sr-only ]">
+        Opens link to Valais Blacknose sheep wikipedia page
+      </span>
     </Link>
 
     <Link href="/design">I will go to design page</Link>
