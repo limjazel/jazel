@@ -58,7 +58,7 @@
       </span>
     </div>
 
-    <div class="[ mt-2 lg:h-[15rem] overflow-y-auto ]">
+    <div class="[ mt-2 lg:h-[15rem] overflow-y-auto ]" tabindex="0">
       <span>
         {selectedFish.museum_phrase}
       </span>

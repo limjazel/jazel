@@ -9,7 +9,7 @@
   <p>something about copy to clipboard</p>
 
   <div class="[ mt-10 flex ]">
-    <CopyToClipboard let:copy value="https://jazellim.com">
+    <CopyToClipboard let:copy id="copy-to-clipboard-sample" name="copy-to-clipboard-sample" value="https://jazellim.com" placeholder="Website link">
       <Button on:click={copy} class="[ -ml-1 rounded-l-none  ]">Copy</Button>
     </CopyToClipboard>
   </div>

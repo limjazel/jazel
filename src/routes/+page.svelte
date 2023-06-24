@@ -21,6 +21,10 @@
   }
 </script>
 
+<svelte:head>
+	<title>Jazel Lim | Home</title>
+</svelte:head>
+
 <!-- banner -->
 <Container>
   <div class="[ flex flex-wrap items-center lg:justify-between min-h-[60vh] ]">

@@ -47,6 +47,7 @@
           <span>
             <img src={tool.icon_url} alt="" class="[ h-12 ]" />
           </span>
+          <span class="[ sr-only ]">{tool.name}</span>
         </button>
 
         <span

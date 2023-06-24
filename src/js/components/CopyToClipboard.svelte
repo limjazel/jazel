@@ -5,6 +5,7 @@
   export let id = "";
   export let name = "";
   export let value = "";
+  export let placeholder = "";
   export let timeout = 5000;
 
   let timer;
@@ -54,6 +55,7 @@
   {id}
   {name}
   {value}
+  {placeholder}
   readonly
   class="[ block w-full rounded outline-none px-5 py-2 ]
          [ border-2 bg-canvas ]
