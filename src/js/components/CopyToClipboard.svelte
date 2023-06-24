@@ -71,6 +71,8 @@
     <div
       on:mouseenter={handleMouseEnter}
       on:mouseleave={handleMouseLeave}
+      on:focus={handleMouseEnter}
+      on:blur={handleMouseLeave}
       transition:scale={{ duration: 300 }}
       class="[ flex flex-col ] [ bg-white rounded shadow-md px-6 py-6 ]"
     >

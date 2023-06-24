@@ -2,9 +2,23 @@
   import Folder from "../Folder.svelte";
 
   let cats = [
-    { name: "ollie", image_url: "/images/cats/ollie.jpeg" },
-    { name: "lemon", image_url: "/images/cats/lemon.jpeg" },
-    { name: "fish", image_url: "/images/cats/fish.jpeg" },
+    {
+      name: "ollie",
+      image_url: "/images/cats/ollie.jpeg",
+      description: "A photo of a yawning short hair black demon cat.",
+    },
+    {
+      name: "lemon",
+      image_url: "/images/cats/lemon.jpeg",
+      description:
+        "A gray and black long-haired tabby cat wearing a santa claus hat.",
+    },
+    {
+      name: "fish",
+      image_url: "/images/cats/fish.jpeg",
+      description:
+        "An orange long-haired tabby cat peaking behind a plant pot.",
+    },
   ];
 
   let selectedCat = cats[0];
@@ -19,12 +33,12 @@
     <button on:click={openFolder}>
       <img
         src="/images/logos/folder.webp"
-        alt="Images folder"
+        alt="mac OS icon of folder"
         class="[ h-16 ]"
       />
-      <span class="[ text-sm text-pearl font-medium drop-shadow-md ]"
-        >Images</span
-      >
+      <span class="[ text-sm text-pearl font-medium drop-shadow-md ]">
+        Images
+      </span>
     </button>
   </svelte:fragment>
 
@@ -72,7 +86,7 @@
           <div class="[ flex border-4 border-pearl shadow-md max-h-72 ]">
             <img
               src={selectedCat.image_url}
-              alt={selectedCat.name}
+              alt={selectedCat.description}
               class="[ w-full object-cover ]"
             />
           </div>

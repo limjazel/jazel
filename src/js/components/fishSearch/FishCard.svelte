@@ -15,7 +15,7 @@
   </span>
 
   <div class="[ bg-canvas rounded ] [ mt-2 py-6 px-3 h-62 ]">
-    <img src={selectedFish.image_uri} alt={selectedFish.name} />
+    <img src={selectedFish.image_uri} alt="in game photo" />
   </div>
 
   <div class="[ mt-4 grid gap-y-2 ]">

@@ -11,7 +11,7 @@
     class="[ mt-8 flex flex-wrap lg:flex-nowrap justify-center items-start gap-10 ]"
   >
     <div>
-      <h3 class="[ mb-2 tracking-tight ]">Accent buttons</h3>
+      <h1 class="[ mb-2 tracking-tight ]">Accent buttons</h1>
       <div class="[ flex gap-4 ]">
         <div class="[ flex flex-col items-start gap-4 ]">
           <Button type="primary" size="large">Primary</Button>
@@ -28,7 +28,7 @@
     </div>
 
     <div>
-      <h3 class="[ mb-2 tracking-tight ]">Secondary buttons</h3>
+      <h1 class="[ mb-2 tracking-tight ]">Secondary buttons</h1>
       <div class="[ flex gap-4 ]">
         <div class="[ flex flex-col items-start gap-4 ]">
           <Button type="neutral" size="large">Neutral</Button>
@@ -45,7 +45,7 @@
     </div>
 
     <div>
-      <h3 class="[ mb-2 tracking-tight ]">Outline buttons</h3>
+      <h1 class="[ mb-2 tracking-tight ]">Outline buttons</h1>
       <div class="[ flex gap-4 ]">
         <div class="[ flex flex-col items-start gap-4 ]">
           <Button type="outline" size="large">Neutral</Button>

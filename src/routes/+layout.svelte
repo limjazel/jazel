@@ -11,6 +11,8 @@
   <AppHeader />
 </Container>
 
-<slot />
+<main>
+  <slot />
+</main>
 
 <AppFooter />

@@ -45,7 +45,7 @@
           class="[ flex flex-col items-center ]"
         >
           <span>
-            <img src={tool.icon_url} alt={tool.name} class="[ h-12 ]" />
+            <img src={tool.icon_url} alt="mac OS app icon for" class="[ h-12 ]" />
           </span>
           <span class="[ sr-only ]">{tool.name}</span>
         </button>

@@ -28,7 +28,7 @@
   </header>
 
   <div class="[ flex flex-col px-10 pt-10 pb-12 ]">
-    <h3 class="[ text-xl tracking-tight ]">{selectedTool.name}</h3>
+    <h1 class="[ text-xl tracking-tight ]">{selectedTool.name}</h1>
     <span class="[ mt-1 ]">{selectedTool.description}</span>
 
     {#if selectedTool.extensions}

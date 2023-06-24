@@ -83,8 +83,9 @@
         >
           <div class="[ flex flex-col items-center ]">
             <div class="[ md:px-4 py-2 ]">
-              <img src={fish.icon_uri} alt={fish.name} />
+              <img src={fish.icon_uri} alt="in game icon of" />
             </div>
+
             <span class="[ text-sm pb-4 md:pb-2 ]">{fish.name}</span>
           </div>
         </Button>
