@@ -14,7 +14,7 @@ export default {
         stroke: '#11190C',
       },
       backgroundImage: {
-        mac: "url('src/images/monterey.jpeg')"
+        mac: "url('/images/monterey.jpeg')"
       }
     },  
   },

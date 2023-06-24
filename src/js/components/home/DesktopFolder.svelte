@@ -2,9 +2,9 @@
   import Folder from "../Folder.svelte";
 
   let cats = [
-    { name: "ollie", image_url: "src/images/cats/ollie.jpeg" },
-    { name: "lemon", image_url: "src/images/cats/lemon.jpeg" },
-    { name: "fish", image_url: "src/images/cats/fish.jpeg" },
+    { name: "ollie", image_url: "/images/cats/ollie.jpeg" },
+    { name: "lemon", image_url: "/images/cats/lemon.jpeg" },
+    { name: "fish", image_url: "/images/cats/fish.jpeg" },
   ];
 
   let selectedCat = cats[0];
@@ -18,7 +18,7 @@
   <svelte:fragment slot="folder" let:openFolder>
     <button on:click={openFolder}>
       <img
-        src="src/images/logos/folder.webp"
+        src="/images/logos/folder.webp"
         alt="Images folder"
         class="[ h-16 ]"
       />

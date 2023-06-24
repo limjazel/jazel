@@ -9,57 +9,57 @@
       description:
         "My current editor! Friendship ended with PHPStorm (I am broke), Sublime and Notepad++, now, VSCode is 🤝 my best friend.",
       extensions: "Prettier, Svelte for VS Code, Tailwind CSS Intellisense",
-      icon_url: "src/images/logos/vscode.webp",
+      icon_url: "/images/logos/vscode.webp",
     },
     {
       name: "iTerm2",
       description:
         "I prefer the terminal to be separated from the code editor when I work, and the default one mac has isn't too kind to the eyes, also recommended by a friend, iTerm has since been a staple tool I regulary use.",
-      icon_url: "src/images/logos/iTerm.webp",
+      icon_url: "/images/logos/iTerm.webp",
     },
     {
       name: "Arc Browser",
       description:
         "I tried it out and stuck with it because of how clean it looks when the sidebar is hidden. I still use both Safari and Firefox though.",
       extensions: "WhatFont, ColorZilla, Awesome Screenshot",
-      icon_url: "src/images/logos/arc.webp",
+      icon_url: "/images/logos/arc.webp",
     },
     {
       name: "Figma",
       description:
         "Figma is a star 🤩. From doing process flows, mockups, prototypes, documents, vectors and doing basic photo editing. Figma has almost everything I need for the basic things in life.",
       extensions: "Image Tracer, Feather Icons, Lorem Ipsum",
-      icon_url: "src/images/logos/figma.webp",
+      icon_url: "/images/logos/figma.webp",
     },
     {
       name: "Affinity Designer",
       description:
         "Affinity Designer was introduced to me and I've been using it for work requiring fancier vectors!",
-      icon_url: "src/images/logos/affinity_designer.webp",
+      icon_url: "/images/logos/affinity_designer.webp",
     },
     {
       name: "Procreate",
       description:
         "For sketching out ideas and making illustrations, Procreate is my favorite hobby buddy. (So far).",
-      icon_url: "src/images/logos/procreate.webp",
+      icon_url: "/images/logos/procreate.webp",
     },
     {
       name: "Adobe Photoshop",
       description:
         "I rarely do photo editing anymore, but Photoshop is still my go-to and what I'm comfortable with.",
-      icon_url: "src/images/logos/adobe_photoshop.webp",
+      icon_url: "/images/logos/adobe_photoshop.webp",
     },
     {
       name: "Alfred",
       description:
         "A custom spotlight search for mac, makes looking for stuff easier and opening apps faster. Makes me more productive (😉).",
-      icon_url: "src/images/logos/alfred.webp",
+      icon_url: "/images/logos/alfred.webp",
     },
     {
       name: "iCloud",
       description:
         "Growing older made me realize there is never enough cloud storage even for a normal person like me. I mainly use iCloud for storing anything. I still use Google drive on some occassions especially for file sharing.",
-      icon_url: "src/images/logos/icloud.webp",
+      icon_url: "/images/logos/icloud.webp",
     },
   ];
 
