@@ -1,16 +1,16 @@
 <script>
-  import Logomark from "../components/Logomark.svelte";
+  import Link from "../components/Link.svelte";
 </script>
 
 <nav class="[ py-4 md:py-6 flex flex-wrap items-center gap-x-10 ]">
   <a href="/">
-    <Logomark />
-    <span class="sr-only">home</span>
+    <span class="sr-only">go to home</span>
+    <span class="font-heading text-3xl tracking-tight">Jazel Lim</span>
   </a>
 
-  <a href="/">
+  <Link href="/">
     <span>home</span>
-  </a>
+  </Link>
 
-  <a href="/design">design</a>
+  <Link href="/design">design</Link>
 </nav>
