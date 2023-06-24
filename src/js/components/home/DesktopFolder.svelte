@@ -50,14 +50,15 @@
           <span class="[ sr-only ]">Close tool info</span>
         </button>
 
-        <div class="[ mt-4 ]">
+        <div class="[ mt-4 w-full ]">
           <span class="[ text-sm text-zinc-400 font-medium ]">Cats</span>
-          <nav class="[ mt-1 flex flex-col items-start ]">
+          <nav class="[ mt-1 flex flex-col ]">
             {#each cats as cat}
               <button
                 type="button"
                 on:click={() => selectCat(cat)}
-                class="[ capitalize py-0.5 hover:bg-red-100 ]"
+                class:font-medium={cat === selectedCat}
+                class="[ capitalize py-0.5 px-1 text-left hover:bg-zinc-300 ] [ rounded ]"
               >
                 {cat.name}
               </button>
@@ -68,7 +69,7 @@
 
       <div class="[ flex flex-col items-center px-8 pt-8 pb-10 ]">
         {#if selectedCat}
-          <div class="[ flex border-4 border-pearl shadow-md ]">
+          <div class="[ flex border-4 border-pearl shadow-md max-h-72 ]">
             <img
               src={selectedCat.image_url}
               alt={selectedCat.name}
