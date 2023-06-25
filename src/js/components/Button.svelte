@@ -12,7 +12,7 @@
 
   const baseStyle = `
     [ border rounded inline-flex items-center justify-center ]
-    [ outline-none focus:ring-2 ring-offset-2 ring-stroke ]
+    [ outline-none focus:ring-2 ring-offset-2 ring-offset-canvas ring-stroke ]
     [ transition-colors duration-100 ease-in-out ]
   `;
 
