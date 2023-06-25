@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-  <title>Jazel Lim | Home</title>
+  <title>Hello! I'm Jazel</title>
 </svelte:head>
 
 <!-- banner -->
