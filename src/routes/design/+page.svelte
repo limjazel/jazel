@@ -49,35 +49,23 @@
   {#if imagePreviewIsOpen}
     <Dialog on:close={closeImagePreview}>
       <DialogBody>
-        <img
-          src={selectedImage.image_url}
-          alt={selectedImage.image_alt}
-        />
+        <img src={selectedImage.image_url} alt={selectedImage.image_alt} />
       </DialogBody>
     </Dialog>
   {/if}
 
-  {#each images as image (image.name)}
-    <div class="grid md:grid-cols-3 gap-6 items-start">
-      <div class="[ bg-red-100 grid gap-y-4 ]">
-        <div>
-          <button
-            on:click={() => viewImage(image)}
-            class="[ absolute bg-accent/50 inset-0 z-10 ]"
-          >
-            <span class="[ text-stroke font-medium ]">{image.name}</span>
-          </button>
+  <div class="grid justify-center gap-y-6">
+    {#each images as image (image.name)}
+      <div class="[ group flex justify-center ]">
+        <button
+          on:click={() => viewImage(image)}
+          class="[ absolute bg-stroke/75 inset-0 z-10 ] [ opacity-0 group-hover:opacity-100 ]"
+        >
+          <span class="[ text-accent font-medium ]">{image.name}</span>
+        </button>
 
-          <img src={image.image_url} alt={image.image_alt} />
-        </div>
+        <img src={image.image_url} alt={image.image_alt} />
       </div>
-
-      <div class="bg-red-100 grid gap-y-6">content</div>
-
-      <div class="bg-red-100 grid gap-y-6">
-        content
-        <!-- <img src="/images/graphics/muse.png" alt="Poster for muse in yellow" /> -->
-      </div>
-    </div>
-  {/each}
+    {/each}
+  </div>
 </Container>

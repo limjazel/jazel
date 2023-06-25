@@ -11,7 +11,8 @@
 <div
   role="dialog"
   tabindex="0"
-  class="[ fixed top-0 left-0 z-30 h-full w-full bg-stroke/50 ]
+  class="c-dialog
+         [ fixed top-0 left-0 z-30 h-full w-full bg-stroke/50 ]
          [ flex flex-col flex-nowrap justify-center items-center ]
          [ overflow-y-auto overscroll-contain ]"
 >
