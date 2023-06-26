@@ -8,7 +8,7 @@
     <div class="[ flex flex-wrap justify-between items-center gap-3 ]">
       <Link href="/">
         <span class="sr-only">go to home</span>
-        <span class="[ flex md:w-[10rem] relative -top-0.5 ]">
+        <span class="[ flex max-w-[6rem] md:w-[10rem] relative -top-0.5 ]">
           <img
             src="/images/logos/main-logo-w-color.svg"
             alt="a hand drawn logo"
@@ -18,7 +18,9 @@
         <span class="[ sr-only ]"> Jazel Lim </span>
       </Link>
 
-      <span class="[ text-sm text-zinc-600 ]">Made with Svelte Kit, Tailwind CSS, Floating UI, and Fuse.js.</span>
+      <span class="[ text-sm text-zinc-600 ]"
+        >Made with Svelte Kit, Tailwind CSS, Floating UI, and Fuse.js.</span
+      >
     </div>
   </Container>
 </footer>
