@@ -1,6 +1,25 @@
 <script>
+  import Button from "../components/Button.svelte";
   import Link from "../components/Link.svelte";
+
+  let navIsOpen = false;
+
+  function openNav() {
+    navIsOpen = true;
+  }
+
+  function closeNav() {
+    navIsOpen = false;
+  }
+
+  function handleKeydown(event) {
+    if (navIsOpen && event.key === "Escape") {
+      closeNav();
+    }
+  }
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <header>
   <nav
@@ -9,7 +28,7 @@
   >
     <Link href="/">
       <span class="sr-only">go to home</span>
-      <span class="[ flex md:min-w-[12rem] relative -top-0.5 ]">
+      <span class="[ flex max-w-[8rem] md:min-w-[12rem] relative -top-0.5 ]">
         <img
           src="/images/logos/main-logo-w-color.svg"
           alt="a hand drawn logo"
@@ -19,9 +38,52 @@
       <span class="[ sr-only ]"> Jazel Lim </span>
     </Link>
 
-    <span class="[ flex gap-6 ]">
+    <span class="[ hidden md:flex gap-6 ]">
       <Link href="/">home</Link>
       <Link href="/design">design</Link>
     </span>
   </nav>
+
+  <div class="fixed inset-0 z-20">
+    <div
+      class="[ fixed inset-0 bg-stroke/50 z-[21] ]"
+      class:hidden={!navIsOpen}
+    />
+
+    <div class="[ z-30 absolute bottom-3 right-3 ]" class:hidden={navIsOpen}>
+      <Button
+        type="neutral"
+        size="small"
+        on:click={openNav}
+        class="[ py-2 ] [ block md:hidden shadow-md ]"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true" />
+        <span class="[ sr-only ]">Open navigation</span>
+      </Button>
+    </div>
+
+    <div
+      class="z-30 absolute bottom-0 [ w-full shadow-lg ]"
+      class:hidden={!navIsOpen}
+    >
+      <div
+        class="[ flex flex-col items-start bg-pearl rounded-t-lg ] [ px-6 pt-6 pb-20 ]"
+      >
+        <Button
+          size="small"
+          type="neutral"
+          on:click={closeNav}
+          class="[ py-2 ] [ absolute bottom-3 right-3 ]"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true" />
+          <span class="[ sr-only ]">Close navigation</span>
+        </Button>
+
+        <nav class="[ grid gap-1 ]">
+          <Link href="/" class="[ py-1 ]">home</Link>
+          <Link href="/design" class="[ py-1 ]">design</Link>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>

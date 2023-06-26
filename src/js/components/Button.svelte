@@ -7,7 +7,7 @@
   /**
    * @type {undefined}
    */
-  export let tabindex =  undefined;
+  export let tabindex = undefined;
   export { className as class };
 
   const baseStyle = `
@@ -20,8 +20,7 @@
     none: "",
     base: "c-button--base [ px-5 py-2 ]",
     small: "c-button--small [ px-3 py-1 text-sm ]",
-    large:
-      "c-button--large [ px-8 py-3 font-medium text-lg w-full flex ]",
+    large: "c-button--large [ px-8 py-3 font-medium text-lg w-full flex ]",
   };
 
   const types = {
@@ -32,7 +31,8 @@
       "c-button--accent [ bg-accent text-stroke border-accent ] [ hover:bg-white hover:text-stroke hover:border-white ]",
     neutral:
       "c-button--neutral [ bg-neutral text-stroke border-neutral ] [ hover:bg-[#B6AE9D] ] [ focus:bg-[#B6AE9D] ]",
-    outline: "c-button--outline [ bg-canvas text-shade border-stroke ] [ hover:bg-neutral ]",
+    outline:
+      "c-button--outline [ bg-canvas text-shade border-stroke ] [ hover:bg-neutral ]",
   };
 
   let className = "";
@@ -43,7 +43,7 @@
   {disabled}
   {tabindex}
   on:click
-  class="c-button {className} {baseStyle} {sizes[size]} {types[type]}"
+  class="c-button {baseStyle} {sizes[size]} {types[type]} {className}"
   class:opacity-50={disabled}
   class:pointer-events-none={disabled}
   role={role || "button"}
