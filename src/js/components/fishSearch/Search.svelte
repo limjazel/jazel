@@ -89,13 +89,13 @@
           tabindex="0"
           class="[ hover:bg-neutral/50 ]"
         >
-          <div class="[ flex flex-col items-center ]">
-            <div class="[ md:px-4 py-2 ]">
+          <span class="[ flex flex-col items-center ]">
+            <span class="[ px-1 md:px-4 py-2 ]">
               <img src={fish.icon_uri} alt="in game icon of" />
-            </div>
+            </span>
 
-            <span class="[ text-sm pb-4 md:pb-2 ]">{fish.name}</span>
-          </div>
+            <span class="[ text-xs md:text-sm pb-4 md:pb-2 ]">{fish.name}</span>
+          </span>
         </Button>
       </div>
     {/each}
