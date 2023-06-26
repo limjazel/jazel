@@ -44,7 +44,7 @@
     </span>
   </nav>
 
-  <div class="fixed inset-0 z-20">
+  <div class="[ fixed inset-0 z-20 md:hidden ]">
     <div
       class="[ fixed inset-0 bg-stroke/50 z-[21] ]"
       class:hidden={!navIsOpen}
