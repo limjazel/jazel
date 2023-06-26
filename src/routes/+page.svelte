@@ -26,27 +26,30 @@
 </svelte:head>
 
 <!-- banner -->
-<Container class="[ py-20 md:pb-24 md:pt-14 ]">
+<Container class="[ py-14 md:pb-24 md:pt-14 ]">
   <div class="[ grid grid-cols-5 gap-10 items-center min-h-[60vh] ]">
-    <div class="[ col-span-5 lg:col-span-3 ]">
-      <img
-        src="/images/banner-lg-cropped.gif"
-        alt="gif banner"
-        class="[ w-full pr-0 px-0 md:px-10 pb-10 lg:pb-0 lg:pr-12 ]"
-      />
-      <span class="[ sr-only ]">
-        An illustration of a lady with short black hair and bright neon green
-        sweater sitting on chair with her other arm resting on the table. The
-        table has a monitor, keyboard and a mouse.
-      </span>
-    </div>
-
     <div class="[ col-span-5 lg:col-span-2 max-w-xl ]">
-      <h1 class="[ text-6xl lg:-mt-10 tracking-tightest ]">Hello! I'm Jazel.</h1>
+      <h1 class="[ text-6xl lg:-mt-10 tracking-tightest ]">
+        Hello! I'm Jazel.
+      </h1>
       <p class="[ mt-2 text-xl leading-relaxed ]">
         I am a designer with experience on building web apps. I enjoy doing
         illustrations from time to time!
       </p>
+    </div>
+
+    <div class="[ col-span-5 lg:col-span-3 ]">
+      <img
+        src="/images/this-is-fine.png"
+        alt="gif banner"
+        class="[ w-full pr-0 px-0 md:px-10 pb-10 lg:pb-0 lg:pr-12 relative -left-2 ]"
+      />
+      <span class="[ sr-only ]">
+        An illustration of a girl sitting on a computer chair facing a table with
+        a laptop and mug on top. She is in a room surrounded by bushes with neon
+        green flowers and leaves hanging from the ceiling. A wall behind shows a
+        photo of three cats, one black, one orange tabby and one gray tabby.
+      </span>
     </div>
   </div>
 </Container>
