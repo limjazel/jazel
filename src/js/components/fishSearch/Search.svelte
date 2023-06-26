@@ -13,6 +13,7 @@
   let keyword = "";
   let fishes = data.fishes;
   let selectedFish = data.fishes[0];
+  let isLoading = true;
 
   /**
    * @type {any[]}
@@ -37,6 +38,7 @@
 
   onMount(() => {
     results = fishes;
+    isLoading = false;
   });
 
   /**
@@ -68,6 +70,12 @@
   <div
     class="[ py-4 px-1 ] [ grid grid-cols-2 md:grid-cols-5 gap-4 ] grid-flow-row auto-rows-max [ h-[32rem] overflow-y-auto ]"
   >
+    {#if isLoading}
+      <span class="[ col-span-2 md:col-span-5 ] [ font-medium text-center ]">
+        Catching the fishes...🐟🐠🐡
+      </span>
+    {/if}
+
     {#each results as fish (fish.id)}
       <div
         class:bg-neutral={fish === selectedFish}

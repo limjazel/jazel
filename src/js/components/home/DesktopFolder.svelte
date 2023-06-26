@@ -22,9 +22,11 @@
   ];
 
   let selectedCat = cats[0];
+  let isLoading = true;
 
   function selectCat(cat) {
     selectedCat = cat;
+    isLoading = false;
   }
 </script>
 
@@ -84,14 +86,20 @@
         </div>
       </aside>
 
-      <div class="[ flex flex-col items-center px-8 pt-8 pb-10 ]">
+      <div class="[ flex flex-col items-center px-8 pt-8 pb-10 w-full ]">
         {#if selectedCat}
           <div class="[ flex border-4 border-pearl shadow-md max-h-72 ]">
-            <img
-              src={selectedCat.image_url}
-              alt={selectedCat.description}
-              class="[ w-full object-cover ]"
-            />
+            {#if isLoading}
+              <div class="[ bg-zinc-200 w-full h-full min-h-[10rem] p-2 ] [ flex items-center ]">
+                <span>Loading cat pic...</span>
+              </div>
+            {:else}
+              <img
+                src={selectedCat.image_url}
+                alt={selectedCat.description}
+                class="[ w-full object-cover ]"
+              />
+            {/if}
           </div>
 
           <span class="[ mt-2 ]">{selectedCat.name}.jpeg</span>
