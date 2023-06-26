@@ -18,7 +18,7 @@
         <span class="[ sr-only ]"> Jazel Lim </span>
       </Link>
 
-      <span class="[ text-sm text-zinc-500 ]">Made with Svelte Kit, Tailwind CSS, Floating UI, and Fuse.js.</span>
+      <span class="[ text-sm text-zinc-600 ]">Made with Svelte Kit, Tailwind CSS, Floating UI, and Fuse.js.</span>
     </div>
   </Container>
 </footer>

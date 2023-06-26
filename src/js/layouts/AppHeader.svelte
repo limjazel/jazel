@@ -19,9 +19,9 @@
       <span class="[ sr-only ]"> Jazel Lim </span>
     </Link>
 
-    <ul class="[ flex gap-6 ]">
+    <span class="[ flex gap-6 ]">
       <Link href="/">home</Link>
       <Link href="/design">design</Link>
-    </ul>
+    </span>
   </nav>
 </header>
