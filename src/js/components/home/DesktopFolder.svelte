@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import Folder from "../Folder.svelte";
 
   let cats = [
@@ -21,13 +22,18 @@
     },
   ];
 
-  let selectedCat = cats[0];
+  let selectedCat;
   let isLoading = true;
 
   function selectCat(cat) {
     selectedCat = cat;
     isLoading = false;
   }
+
+  onMount(() => {
+    selectedCat = cats[0];
+    isLoading = false;
+  });
 </script>
 
 <Folder>
@@ -90,7 +96,9 @@
         {#if selectedCat}
           <div class="[ flex border-4 border-pearl shadow-md max-h-72 ]">
             {#if isLoading}
-              <div class="[ bg-zinc-200 w-full h-full min-h-[10rem] p-2 ] [ flex items-center ]">
+              <div
+                class="[ bg-zinc-200 w-full h-full min-h-[10rem] p-2 ] [ flex items-center ]"
+              >
                 <span>Loading cat pic...</span>
               </div>
             {:else}
