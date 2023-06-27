@@ -20,6 +20,11 @@
    */
   let results = [];
 
+  /**
+   * @type {string | any[]}
+   */
+  let loaded = [];
+
   let fuse = new Fuse(fishes, {
     includeScore: true,
     shouldSort: true,
@@ -48,6 +53,17 @@
     const value = fish;
     selectedFish = fish;
     dispatch("select", { value });
+  }
+
+  function prefetch(fish) {
+    if (loaded.includes(fish.image_uri)) {
+      return;
+    }
+
+    let image = new Image()
+    image.src = fish.image_uri
+
+    loaded = [...loaded, fish.image_uri]
   }
 </script>
 
@@ -81,6 +97,7 @@
         class:bg-neutral={fish === selectedFish}
         class:ring-2={fish === selectedFish}
         class:ring-stroke={fish === selectedFish}
+        on:mouseover={() => prefetch(fish)}
         class="[ flex rounded max-h-40 ]"
       >
         <Button
