@@ -28,7 +28,7 @@
   let fuse = new Fuse(fishes, {
     includeScore: true,
     shouldSort: true,
-    threshold: 0.5,
+    threshold: 0.3,
     keys: ["name", "availability.location", "availability.rarity"],
   });
 
