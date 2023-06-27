@@ -20,7 +20,7 @@
   <header class="[ p-2 flex items-center bg-zinc-200 ]">
     <button on:click={close} class="[ h-4 w-4 bg-red-400 rounded-full ]">
       <i
-        class="fa-solid fa-xmark [ text-xs text-red-700 relative -top-1 ]"
+        class="fa-solid fa-xmark [ text-xs text-red-700 relative -top-[0.3rem] ]"
         aria-hidden="true"
       />
       <span class="[ sr-only ]">Close tool info</span>
