@@ -98,6 +98,7 @@
         class:ring-2={fish === selectedFish}
         class:ring-stroke={fish === selectedFish}
         on:mouseover={() => prefetch(fish)}
+        on:focus={() => prefetch(fish)}
         class="[ flex rounded max-h-40 ]"
       >
         <Button

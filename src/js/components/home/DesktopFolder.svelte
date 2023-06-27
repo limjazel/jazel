@@ -24,6 +24,7 @@
 
   let selectedCat;
   let isLoading = true;
+  let loaded = [];
 
   function selectCat(cat) {
     selectedCat = cat;
@@ -34,6 +35,17 @@
     selectedCat = cats[0];
     isLoading = false;
   });
+
+  function prefetch(cat) {
+    if (loaded.includes(cat.image_url)) {
+      return;
+    }
+
+    let image = new Image();
+    image.src = cat.image_url;
+
+    loaded = [...loaded, cat.image_url];
+  }
 </script>
 
 <Folder>
@@ -73,7 +85,7 @@
         </button>
 
         <div class="[ mt-4 w-full ]">
-          <span class="[ text-sm text-zinc-400 font-medium ]">Cats</span>
+          <span class="[ text-xs opacity-50 font-medium ]">Cats</span>
           <nav
             class="[ mt-1 flex flex-col ]"
             aria-label="Navigation for Images folder"
@@ -82,6 +94,8 @@
               <button
                 type="button"
                 on:click={() => selectCat(cat)}
+                on:mouseover={() => prefetch(cat)}
+                on:focus={() => prefetch(cat)}
                 class:font-medium={cat === selectedCat}
                 class="[ capitalize py-0.5 px-1 text-left hover:bg-zinc-300 ] [ rounded ]"
               >

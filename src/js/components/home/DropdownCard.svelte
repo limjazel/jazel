@@ -25,8 +25,8 @@
   <div class="[ max-w-lg ]">
     <span class="[ text-sm font-medium relative -top-3 ]">Dropdown</span>
     <p class="[ text-shade relative -top-1 ]">
-      You can also close dropdown menu when you press escape key or click
-      outside the menu.
+      You can also close the dropdown menu when you press escape key or click
+      outside it.
     </p>
   </div>
 
