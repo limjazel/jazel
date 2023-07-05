@@ -36,6 +36,8 @@
         I am a designer with experience on building web apps. I enjoy doing
         illustrations from time to time!
       </p>
+
+      <a href="/case-studies/sidedoor">case</a>
     </div>
 
     <div class="[ col-span-5 lg:col-span-3 ]">
