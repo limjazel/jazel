@@ -7,7 +7,7 @@
   <title>Study – Sidebar filter to a Horizontal filter</title>
 </svelte:head>
 
-<Container class="[ flex flex-col items-center max-w-4xl pb-48 ]">
+<Container class="[ flex flex-col items-center max-w-[52rem] pb-48 ]">
   <header class="[ flex flex-col items-center ]">
     <h1 class="[ text-4xl mt-1 text-center ]">
       Sidebar filter to a Horizontal filter
