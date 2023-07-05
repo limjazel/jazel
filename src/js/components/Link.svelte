@@ -6,7 +6,7 @@
 
   const baseStyle = `[ cursor-pointer hover:underline underline-offset-2 decoration-2 ]
                      [ outline-none focus:ring-2 ring-offset-2 ring-stroke ] 
-                     [ font-medium rounded ]`;
+                     [ font-medium rounded ] [ hover:italic ]`;
 
   const types = {
     accent: "c-link--accent [ text-accent ]",

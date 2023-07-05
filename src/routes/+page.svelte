@@ -8,6 +8,7 @@
   import InputCard from "../js/components/home/InputCard.svelte";
   import LinkCard from "../js/components/home/LinkCard.svelte";
   import MiniMac from "../js/components/home/MiniMac.svelte";
+  import Note from "../js/components/Note.svelte";
 
   export let data;
 
@@ -27,7 +28,7 @@
 
 <!-- banner -->
 <Container class="[ py-14 md:pb-24 md:pt-14 ]">
-  <div class="[ grid grid-cols-5 gap-10 items-center min-h-[60vh] ]">
+  <div class="[ grid grid-cols-5 gap-10 items-center min-h-[52vh] ]">
     <div class="[ col-span-5 lg:col-span-2 max-w-xl ]">
       <h1 class="[ text-6xl lg:-mt-10 tracking-tight ]">
         Hello! I'm
@@ -43,7 +44,9 @@
       </p>
     </div>
 
-    <div class="[ col-span-5 lg:col-span-3 ] [ transition hover:scale-110 hover:translate-x-4 ]">
+    <div
+      class="[ col-span-5 lg:col-span-3 ] [ transition hover:scale-110 hover:translate-x-4 ]"
+    >
       <img
         src="/images/this-is-fine.png"
         alt="gif banner"
@@ -59,6 +62,44 @@
     </div>
   </div>
 </Container>
+
+<div class="[ bg-stroke mt-20 ]">
+  <Container class="[ grid md:grid-cols-3 gap-10 ]">
+    <a href="/case-studies/sidedoor/horizontal-filter">
+      <Note
+        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 -mt-20 p-6 ]"
+      >
+        <span
+          class="[ -mt-10 px-4 py-2 bg-neutral/50 shadow ] [ rotate-4 ] [ font-medium font-decorative italic ]"
+        >
+          case study
+        </span>
+        <span class="[ text-2xl font-bold mt-4 ]">
+          Sidebar filter to a Horizontal filter
+        </span>
+
+        <p class="[ mt-1 ]">
+          A study focused on how a sidebar product filter is tranformed into a
+          horizontal filter to make space for a (incoming) collection sidebar.
+        </p>
+      </Note>
+    </a>
+
+    <Note
+      class="[ grid content-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
+    >
+      <span>study</span>
+      <span class="[ text-2xl font-bold mt-2 ]"
+        >Sidebar filter to a Horizontal filter</span
+      >
+      <p class="[ mt-1 ]">
+        a study focused on how we updated the sidebar product filter for
+        products into a horizontal filter to make space for a (incoming)
+        collection sidebar.
+      </p>
+    </Note>
+  </Container>
+</div>
 
 <div class="[ py-40 bg-stroke ]">
   <section class="[ pb-18 ]">

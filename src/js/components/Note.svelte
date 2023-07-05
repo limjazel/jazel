@@ -1,0 +1,10 @@
+<script>
+  export { className as class };
+  let className = "";
+</script>
+
+<div
+  class="[ bg-accent ] [ transition hover:rotate-0 hover:-translate-y-4 ] [ shadow-lg ] {className}"
+>
+  <slot />
+</div>
