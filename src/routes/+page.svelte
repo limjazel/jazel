@@ -27,76 +27,113 @@
 </svelte:head>
 
 <!-- banner -->
-<Container class="[ py-14 md:pb-24 md:pt-14 ]">
-  <div class="[ grid grid-cols-5 gap-10 items-center min-h-[52vh] ]">
-    <div class="[ col-span-5 lg:col-span-2 max-w-xl ]">
-      <h1 class="[ text-6xl lg:-mt-10 tracking-tight ]">
-        Hello! I'm
-        <span
-          class="[ font-decorative font-semibold tracking-tightest italic text-stroke ml-1.5 text-7xl ]"
-        >
-          Jazel.
-        </span>
-      </h1>
-      <p class="[ mt-2 text-xl leading-relaxed ]">
-        I am a designer with experience on building web apps. I enjoy doing
-        illustrations from time to time!
-      </p>
-    </div>
-
-    <div
-      class="[ col-span-5 lg:col-span-3 ] [ transition hover:scale-110 hover:translate-x-4 ]"
-    >
-      <img
-        src="/images/this-is-fine.png"
-        alt="gif banner"
-        class="[ w-full pr-0 px-0 md:px-10 pb-10 lg:pb-0 lg:pr-12 relative -left-2 ]"
-      />
-      <span class="[ sr-only ]">
-        An illustration of a girl sitting on a computer chair facing a table
-        with a laptop and mug on top. She is in a room surrounded by bushes with
-        neon green flowers and leaves hanging from the ceiling. A wall behind
-        shows a photo of three cats, one black, one orange tabby and one gray
-        tabby.
+<Container class="[ pt-16 pb-24 ]">
+  <div class="[ flex flex-col items-center justify-center px-10 ]">
+    <h1 class="[ text-6xl md:text-8xl tracking-tight text-center ]">
+      Hello! I'm
+      <span
+        class="[ font-decorative font-semibold tracking-tightest italic text-stroke text-7xl md:text-9xl ]"
+      >
+        Jazel.
       </span>
-    </div>
+    </h1>
+    <p class="[ mt-6 text-xl text-center leading-narrow max-w-lg ]">
+      I am a designer with experience on building web apps. I enjoy doing
+      illustrations from time to time!
+    </p>
   </div>
 </Container>
 
-<div class="[ bg-stroke mt-20 ]">
-  <Container class="[ grid md:grid-cols-3 gap-10 ]">
+<div class="[ bg-canvas md:mt-8 pb-20 px-10 ]">
+  <Container
+    class="[ grid md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center gap-10 ]"
+  >
     <a href="/case-studies/sidedoor/horizontal-filter">
       <Note
         class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 -mt-20 p-6 ]"
       >
         <span
-          class="[ -mt-10 px-4 py-2 bg-neutral/50 shadow ] [ rotate-4 ] [ font-medium font-decorative italic ]"
+          class="[ -mt-10 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
         >
           case study
         </span>
+
         <span class="[ text-2xl font-bold mt-4 ]">
           Sidebar filter to a Horizontal filter
         </span>
+
+        <div class="[ flex gap-2 my-2 ]">
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            UI/UX
+          </span>
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            Front-end
+          </span>
+        </div>
 
         <p class="[ mt-1 ]">
           A study focused on how a sidebar product filter is tranformed into a
           horizontal filter to make space for a (incoming) collection sidebar.
         </p>
+
+        <span class="[ mt-10 font-semibold italic ]">Read more →</span>
       </Note>
     </a>
 
     <Note
-      class="[ grid content-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
+      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
     >
-      <span>study</span>
-      <span class="[ text-2xl font-bold mt-2 ]"
-        >Sidebar filter to a Horizontal filter</span
+      <span
+        class="[ -mt-10 ml-6 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
       >
+        case study
+      </span>
+      <span class="[ text-2xl font-bold mt-4 ]"> EarthUs </span>
+
+      <div class="[ flex flex-wrap gap-2 my-2 ]">
+        <span
+          class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+        >
+          Branding
+        </span>
+        <span
+          class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+        >
+          Social Design
+        </span>
+      </div>
+
       <p class="[ mt-1 ]">
-        a study focused on how we updated the sidebar product filter for
-        products into a horizontal filter to make space for a (incoming)
-        collection sidebar.
+        Create, support, promote, and employ environmentally responsible
+        technological innovations.
       </p>
+    </Note>
+
+    <Note
+      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-mt-28 ]"
+    >
+      <span
+        class="[ -mt-4 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
+      />
+
+      <div class="w-full px-6 pb-4">
+        <img
+          src="/images/this-is-fine.png"
+          alt="gif banner"
+          class="[ w-full object-contain ] [ -rotate-2 ]"
+        />
+        <span class="[ sr-only ]">
+          An illustration of a girl sitting on a computer chair facing a table
+          with a laptop and mug on top. She is in a room surrounded by bushes
+          with neon green flowers and leaves hanging from the ceiling. A wall
+          behind shows a photo of three cats, one black, one orange tabby and
+          one gray tabby.
+        </span>
+      </div>
     </Note>
   </Container>
 </div>

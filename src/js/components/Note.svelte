@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="[ bg-accent ] [ transition hover:rotate-0 hover:-translate-y-4 ] [ shadow-lg ] {className}"
+  class="[ bg-accent ] [ max-w-[360px] ] [ transition hover:rotate-0 hover:-translate-y-4 ] [ shadow-lg ] {className}"
 >
   <slot />
 </div>
