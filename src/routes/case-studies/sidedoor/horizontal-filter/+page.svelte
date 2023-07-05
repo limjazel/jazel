@@ -1,6 +1,6 @@
 <script>
-  import Container from "../../../js/components/Container.svelte";
-  import Link from "../../../js/components/Link.svelte";
+  import Container from "../../../../js/components/Container.svelte";
+  import Link from "../../../../js/components/Link.svelte";
 </script>
 
 <svelte:head>
