@@ -1,12 +1,13 @@
 <script>
   import Container from "../../../js/components/Container.svelte";
+  import Link from "../../../js/components/Link.svelte";
 </script>
 
 <svelte:head>
   <title>Study – Sidebar filter to a Horizontal filter</title>
 </svelte:head>
 
-<Container class="[ flex flex-col items-center max-w-4xl pb-24 ]">
+<Container class="[ flex flex-col items-center max-w-4xl pb-48 ]">
   <header class="[ flex flex-col items-center ]">
     <h1 class="[ text-4xl mt-1 text-center ]">
       Sidebar filter to a Horizontal filter
@@ -102,7 +103,7 @@
       properly.
     </p>
 
-    <div class="[ mt-6 space-y-8 ]">
+    <div class="[ mt-12 grid gap-12 ]">
       <div>
         <span
           class="[ ml-1 text-lg text-stroke font-bold ] [ hover:underline underline-offset-1 ]"
@@ -153,7 +154,7 @@
         </span>
       </div>
 
-      <div>
+      <div class="[ mt-6 ]">
         <span
           class="[ ml-1 text-lg text-stroke font-bold ] [ hover:underline underline-offset-1 ]"
         >
@@ -171,6 +172,52 @@
             Usually more issues arise as this stage progresses, just like in
             this situation.
           </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="[ mt-12 ]">
+      <h2 class="[ text-2xl ]">Further issues</h2>
+
+      <div class="[ mt-6 mx-6 rounded-lg overflow-hidden shadow-lg ]">
+        <video width="100%" height="auto" controls>
+          <source
+            src="/images/case-study/tabbing-across-the-horizontal-filter.mov"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="[ mt-6 ]">
+        If you'll notice, using the keyboard to tab from the "Sort by" filter
+        jumps to the product name, instead of the next filter, which is the
+        "Category". This is caused by the positioning of the dropdown menu and
+        the header (which is sticky on scroll), which are both floating
+        elements.
+      </p>
+
+      <p class="[ mt-4 ]">
+        But, with the help of
+        <Link href="https://github.com/romkor/svelte-portal">
+          svelte-portal
+        </Link>, we were able to fix things a bit easier!
+      </p>
+
+      <div class="[ mt-16 ]">
+        <h2 class="[ text-4xl ]">Voila!</h2>
+        <p class="[ mt-2 ]">
+          An accessible sticky horizontal filter.
+        </p>
+
+        <div class="[ mt-6 mx-6 rounded-lg overflow-hidden shadow-lg ]">
+          <video width="100%" height="auto" controls>
+            <source
+              src="/images/case-study/tabbing-across-the-horizontal-filter-fixed.mov"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
