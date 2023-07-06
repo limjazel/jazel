@@ -7,7 +7,9 @@
   <title>Study – Sidebar filter to a Horizontal filter</title>
 </svelte:head>
 
-<div class="[ flex flex-col items-center max-w-[52rem] pb-48 pt-20 px-6 ] [ mx-auto ]">
+<div
+  class="[ flex flex-col items-center max-w-[52rem] pb-48 pt-20 px-6 ] [ mx-auto ]"
+>
   <header class="[ flex flex-col items-center ]">
     <h1 class="[ text-4xl mt-1 text-center ]">
       Sidebar filter to a Horizontal filter
@@ -45,8 +47,8 @@
       <h2 class="[ text-2xl ]">Overview</h2>
       <p class="[ mt-1 ]">
         While the Sidedoor user base has been steadily growing, so have the
-        features, like in this scenario, to make space for new ones, we make
-        changes to improve what had already been built.
+        features. To make space for new ones, we make changes to improve what
+        had already been built.
       </p>
       <p class="[ mt-2 ]">
         In this case study, it will be broken down how we ended up transforming
@@ -206,9 +208,7 @@
 
       <div class="[ mt-16 ]">
         <h2 class="[ text-4xl ]">Voila!</h2>
-        <p class="[ mt-2 ]">
-          An accessible sticky horizontal filter.
-        </p>
+        <p class="[ mt-2 ]">An accessible sticky horizontal filter.</p>
 
         <div class="[ mt-6 mx-6 rounded-lg overflow-hidden shadow-lg ]">
           <video width="100%" height="auto" controls>

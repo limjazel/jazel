@@ -124,7 +124,7 @@
         <img
           src="/images/this-is-fine.png"
           alt="gif banner"
-          class="[ w-full object-contain ] [ -rotate-2 ]"
+          class="[ w-full ]"
         />
         <span class="[ sr-only ]">
           An illustration of a girl sitting on a computer chair facing a table
