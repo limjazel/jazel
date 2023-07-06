@@ -28,7 +28,7 @@
   >
     <Link href="/">
       <span class="sr-only">go to home</span>
-      <span class="[ flex max-w-[8rem] md:min-w-[12rem] relative -top-0.5 ]">
+      <span class="[ flex max-w-[8rem] md:min-w-[10rem] relative -top-0.5 ]">
         <img
           src="/images/logos/main-logo-w-color.svg"
           alt="a hand drawn logo"
@@ -38,9 +38,16 @@
       <span class="[ sr-only ]"> Jazel Lim </span>
     </Link>
 
-    <span class="[ hidden md:flex gap-6 ]">
+    <span class="[ hidden md:flex items-center gap-6 ]">
       <Link href="/">home</Link>
       <Link href="/design">design</Link>
+      <Link href="https://github.com/limjazel" class="group [ px-1 ]">
+        <span class="[ sr-only ]">Github profile</span>
+        <i
+          class="fa-brands fa-github [ group-hover:text-stroke text-lg relative top-px ]"
+          aria-hidden="true"
+        />
+      </Link>
     </span>
   </nav>
 
@@ -82,6 +89,13 @@
         <nav class="[ grid gap-1 ]">
           <Link href="/" class="[ py-1 ]">home</Link>
           <Link href="/design" class="[ py-1 ]">design</Link>
+          <Link href="https://github.com/limjazel" class="group [ px-1 ]">
+            <span class="[ sr-only ]">Github profile</span>
+            <i
+              class="fa-brands fa-github [ group-hover:text-stroke text-lg ] [ -ml-1 mt-1 py-1 ]"
+              aria-hidden="true"
+            />
+          </Link>
         </nav>
       </div>
     </div>
