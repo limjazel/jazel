@@ -44,7 +44,7 @@
       <Link href="https://github.com/limjazel" class="group [ px-1 ]">
         <span class="[ sr-only ]">Github profile</span>
         <i
-          class="fa-brands fa-github [ group-hover:text-stroke text-lg relative top-px ]"
+          class="fa-brands fa-github-alt [ group-hover:text-stroke text-lg relative top-px ]"
           aria-hidden="true"
         />
       </Link>
@@ -92,7 +92,7 @@
           <Link href="https://github.com/limjazel" class="group [ px-1 ]">
             <span class="[ sr-only ]">Github profile</span>
             <i
-              class="fa-brands fa-github [ group-hover:text-stroke text-lg ] [ -ml-1 mt-1 py-1 ]"
+              class="fa-brands fa-github-alt [ group-hover:text-stroke text-lg ] [ -ml-1 mt-1 py-1 ]"
               aria-hidden="true"
             />
           </Link>
