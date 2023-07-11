@@ -33,7 +33,7 @@
 </NoteBlock>
 
 <Container>
-  <div class="[ mt-8 mx-6 rounded-lg overflow-hidden shadow-lg ]">
+  <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
     <img
       src="/images/case-study/angat-buhay/get-involved.png"
       alt="a screenshot of a product catalog"
@@ -41,7 +41,7 @@
   </div>
 </Container>
 
-<NoteBlock class="[ mt-20 mx-auto ]">
+<NoteBlock class="[ mt-10 mx-auto ]">
   <div>
     <h2 class="[ text-2xl ]">Overview</h2>
     <p class="[ mt-1 ]">
