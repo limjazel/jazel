@@ -94,7 +94,9 @@
 </Container>
 
 <NoteBlock class="[ mt-20 mx-auto ]">
-  <div class="[ w-full p-6 ] [ border border-dashed border-neutral rounded-lg bg-pearl/50 ]">
+  <div
+    class="[ w-full p-6 ] [ border border-dashed border-neutral rounded-lg bg-pearl/50 ]"
+  >
     <h2 class="[ text-2xl ]">Proposed solutions</h2>
 
     <ul class="[ mt-1 ml-6 list-disc ] [ grid gap-2 ]">
@@ -127,6 +129,21 @@
   <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
     <img
       src="/images/case-study/angat-buhay/sitemap.png"
+      alt="a screenshot of angat buhay ph website"
+    />
+  </div>
+</Container>
+
+<NoteBlock class="[ mt-20 mx-auto ]">
+  <div class="[ w-full ]">
+    <h2 class="[ text-2xl ]">Wireframes</h2>
+  </div>
+</NoteBlock>
+
+<Container class="[ pt-5 ]">
+  <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
+    <img
+      src="/images/case-study/angat-buhay/wireframes.png"
       alt="a screenshot of angat buhay ph website"
     />
   </div>
