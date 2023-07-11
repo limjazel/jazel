@@ -84,34 +84,39 @@
       </Note>
     </a>
 
-    <Note
-      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
-    >
-      <span
-        class="[ -mt-10 ml-6 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
+    <a href="/case-studies/personal/angat-buhay">
+      <Note
+        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
       >
-        case study
-      </span>
-      <span class="[ text-2xl font-bold mt-4 ]"> EarthUs </span>
-
-      <div class="[ flex flex-wrap gap-2 my-2 ]">
         <span
-          class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          class="[ -mt-10 ml-6 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
         >
-          Branding
+          case study
         </span>
-        <span
-          class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
-        >
-          Social Design
-        </span>
-      </div>
+        <span class="[ text-2xl font-bold mt-4 ]"> Angat Buhay PH </span>
 
-      <p class="[ mt-1 ]">
-        Create, support, promote, and employ environmentally responsible
-        technological innovations.
-      </p>
-    </Note>
+        <div class="[ flex flex-wrap gap-2 my-2 ]">
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            UI/UX
+          </span>
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            Website Design
+          </span>
+        </div>
+
+        <p class="[ mt-1 ]">
+          A personal study on the Angat Buhay website. Angat Buhay Foundation,
+          incorporated as Angat Pinas, Inc., is a non-profit, non-governmental
+          organization based in the Philippines.
+        </p>
+
+        <span class="[ mt-10 font-semibold italic ]">Read more →</span>
+      </Note>
+    </a>
 
     <Note
       class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-mt-4 lg:-mt-28 ]"
