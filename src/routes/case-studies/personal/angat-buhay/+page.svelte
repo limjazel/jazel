@@ -129,7 +129,7 @@
   <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
     <img
       src="/images/case-study/angat-buhay/sitemap.png"
-      alt="a screenshot of angat buhay ph website"
+      alt="angat buhay new sitemap"
     />
   </div>
 </Container>
@@ -144,7 +144,7 @@
   <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
     <img
       src="/images/case-study/angat-buhay/wireframes.png"
-      alt="a screenshot of angat buhay ph website"
+      alt="angat buhay wireframes"
     />
   </div>
 </Container>
