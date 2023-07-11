@@ -35,7 +35,7 @@
 <Container>
   <div class="[ mt-8 mx-6 rounded-lg overflow-hidden shadow-lg ]">
     <img
-      src="/images/case-study/horizontal-filter-banner.png"
+      src="/images/case-study/angat-buhay/get-involved.png"
       alt="a screenshot of a product catalog"
     />
   </div>
