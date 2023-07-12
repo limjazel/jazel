@@ -148,3 +148,22 @@
     />
   </div>
 </Container>
+
+<NoteBlock class="[ mt-20 mx-auto ]">
+  <div class="[ w-full ]">
+    <h2 class="[ text-2xl ]">Website design</h2>
+    <p class="[ mt-1 ]">
+      The website is simple and clean, matched with images that the organization
+      has documented. The goal is to be concise, without losing it’s sincerity.
+    </p>
+  </div>
+</NoteBlock>
+
+<Container class="[ pt-5 pb-40 ]">
+  <div class="[ mx-6 rounded-lg overflow-hidden shadow-lg ]">
+    <img
+      src="/images/case-study/angat-buhay/mockup/home.png"
+      alt="website redesign home page"
+    />
+  </div>
+</Container>
