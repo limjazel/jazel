@@ -56,14 +56,14 @@
   }
 
   function prefetch(fish) {
-    if (loaded.includes(fish.image_uri)) {
+    if (loaded.includes(fish.render_url)) {
       return;
     }
 
     let image = new Image()
-    image.src = fish.image_uri
+    image.src = fish.render_url
 
-    loaded = [...loaded, fish.image_uri]
+    loaded = [...loaded, fish.render_url]
   }
 </script>
 
@@ -92,7 +92,7 @@
       </span>
     {/if}
 
-    {#each results as fish (fish.id)}
+    {#each results as fish}
       <div
         class:bg-neutral={fish === selectedFish}
         class:ring-2={fish === selectedFish}
@@ -109,7 +109,7 @@
         >
           <span class="[ flex flex-col items-center ]">
             <span class="[ px-1 md:px-4 py-2 ]">
-              <img src={fish.icon_uri} alt="in game icon of" />
+              <img src={fish.image_url} alt="in game icon of" />
             </span>
 
             <span class="[ text-xs md:text-sm pb-4 md:pb-2 ]">{fish.name}</span>

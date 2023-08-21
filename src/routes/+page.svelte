@@ -9,6 +9,7 @@
   import LinkCard from "../js/components/home/LinkCard.svelte";
   import MiniMac from "../js/components/home/MiniMac.svelte";
   import Note from "../js/components/Note.svelte";
+  import Link from "../js/components/Link.svelte";
 
   export let data;
 
@@ -153,8 +154,12 @@
           One of the things I built quite a few times is a searchable library.
         </p>
         <p class="[ text-lg text-canvas ]">
-          Using ACNH API (v1) for fish and fuse.js, here's a simple searchable
-          wiki for the water creatures in Animal Crossing (New Horizons).
+          Using 
+          <Link href="https://api.nookipedia.com/?pk_campaign=legacy-api-page" type="accent">
+            Nookipedia API
+          </Link> 
+          and fuse.js, here's a simple searchable wiki for the water creatures in 
+          Animal Crossing (New Horizons).
         </p>
       </div>
 
