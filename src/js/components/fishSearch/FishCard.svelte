@@ -51,12 +51,12 @@
       <span
         class="[ col-span-2 font-semibold ] [ bg-neutral rounded-l-full py-1 px-3 ]"
       >
-        Rarity
+        Shadow size
       </span>
       <span
         class="[ col-span-2 whitespace-nowrap ] [ bg-canvas rounded-r-full py-1 px-3 ]"
       >
-        {selectedFish.rarity}
+        {selectedFish.shadow_size}
       </span>
     </div>
 
