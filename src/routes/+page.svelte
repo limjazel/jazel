@@ -28,7 +28,7 @@
 </svelte:head>
 
 <!-- banner -->
-<Container class="[ pt-16 pb-24 ]">
+<Container class="[ pt-16 pb-16 md:pb-24 ]">
   <div class="[ flex flex-col items-center justify-center px-10 ]">
     <h1 class="[ text-6xl md:text-8xl tracking-tight text-center ]">
       Hello! I'm
@@ -47,23 +47,56 @@
 
 <div class="[ bg-canvas md:mt-8 pb-20 px-10 ]">
   <Container
-    class="[ grid md:grid-cols-2 lg:grid-cols-3 content-start justify-items-center gap-10 ]"
+    class="[ grid md:grid-cols-2 lg:grid-cols-3 gap-16 ] [ place-content-center content-start ]"
   >
-    <a href="/case-studies/sidedoor/horizontal-filter">
+    <a href="https://jazel.usemedley.site/discussions/handling-multiple-firebase-instances/697093062689554432">
       <Note
-        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 -mt-20 p-6 ]"
+        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-20 p-6 ]"
       >
         <span
           class="[ -mt-10 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
         >
-          case study
+          blog
         </span>
 
         <span class="[ text-2xl font-bold mt-4 ]">
-          Sidebar filter to a Horizontal filter
+          Handling multiple firebase instances
         </span>
 
         <div class="[ flex gap-2 my-2 ]">
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            Database
+          </span>
+          <span
+            class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
+          >
+            Front-end
+          </span>
+        </div>
+
+        <p class="[ mt-1 ]">
+          Trying to cache firebase tokens led me to an issue with implementing multiple firebase instances.
+        </p>
+
+        <span class="[ mt-10 font-semibold italic ]">Read more →</span>
+      </Note>
+    </a>
+
+    <a href="/case-studies/sidedoor/horizontal-filter">
+      <Note
+        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-top-16 p-6 ]"
+      >
+        <span
+          class="[ -mt-10 ml-6 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
+        >
+          case study
+        </span>
+
+        <span class="[ text-2xl font-bold mt-4 ]"> Sidebar filter to a horizontal filter </span>
+
+        <div class="[ flex flex-wrap gap-2 my-2 ]">
           <span
             class="[ border border-stroke ] [ rounded-full px-3 py-1 ] [ text-xs italic text-shade ]"
           >
@@ -85,9 +118,32 @@
       </Note>
     </a>
 
+    <Note
+      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-4 lg:-top-28 ]"
+    >
+      <span
+        class="[ -mt-4 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
+      />
+
+      <div class="w-full px-6 pb-4">
+        <img
+          src="/images/this-is-fine.png"
+          alt="gif banner"
+          class="[ w-full ]"
+        />
+        <span class="[ sr-only ]">
+          An illustration of a girl sitting on a computer chair facing a table
+          with a laptop and mug on top. She is in a room surrounded by bushes
+          with neon green flowers and leaves hanging from the ceiling. A wall
+          behind shows a photo of three cats, one black, one orange tabby and
+          one gray tabby.
+        </span>
+      </div>
+    </Note>
+  
     <a href="/case-studies/personal/angat-buhay">
       <Note
-        class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-mt-16 p-6 ]"
+        class="[ grid content-start justify-self-center justify-items-start ] [ min-h-[300px] ] [ -rotate-3 md:-top-20 p-6 ]"
       >
         <span
           class="[ -mt-10 ml-6 px-4 py-2 bg-neutral/50 shadow ] [ font-medium font-decorative italic ]"
@@ -120,26 +176,14 @@
     </a>
 
     <Note
-      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-mt-4 lg:-mt-28 ]"
+      class="[ p-6 ] [ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-4 lg:-top-20 ]"
     >
       <span
-        class="[ -mt-4 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
-      />
+        class="[ -mt-12 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
+      >
+      </span>
 
-      <div class="w-full px-6 pb-4">
-        <img
-          src="/images/this-is-fine.png"
-          alt="gif banner"
-          class="[ w-full ]"
-        />
-        <span class="[ sr-only ]">
-          An illustration of a girl sitting on a computer chair facing a table
-          with a laptop and mug on top. She is in a room surrounded by bushes
-          with neon green flowers and leaves hanging from the ceiling. A wall
-          behind shows a photo of three cats, one black, one orange tabby and
-          one gray tabby.
-        </span>
-      </div>
+      <span class="[ text-2xl font-bold mt-4 ]"> ....</span>
     </Note>
   </Container>
 </div>
