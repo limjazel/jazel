@@ -29,11 +29,11 @@
 
 <!-- banner -->
 <Container class="[ pt-16 pb-16 md:pb-24 ]">
-  <div class="[ flex flex-col items-center justify-center px-10 ]">
-    <h1 class="[ text-6xl md:text-8xl tracking-tight text-center ]">
+  <div class="[ flex flex-col items-center justify-center px-0 md:px-10 ]">
+    <h1 class="[ text-5xl md:text-8xl tracking-tight text-center ]">
       Hello! I'm
       <span
-        class="[ font-decorative font-semibold tracking-tightest italic text-stroke text-7xl md:text-9xl ]"
+        class="[ font-decorative font-semibold tracking-tightest italic text-stroke text-6xl md:text-9xl ]"
       >
         Jazel.
       </span>
@@ -45,7 +45,7 @@
   </div>
 </Container>
 
-<div class="[ bg-canvas md:mt-8 pb-20 px-10 ]">
+<div class="[ md:mt-8 pb-20 px-2 md:px-10 ] [ bg-canvas ]">
   <Container
     class="[ grid md:grid-cols-2 lg:grid-cols-3 gap-16 ] [ place-content-center content-start ]"
   >
