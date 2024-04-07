@@ -119,7 +119,7 @@
     </a>
 
     <Note
-      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-4 lg:-top-28 ]"
+      class="[ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-16 lg:-top-28 ]"
     >
       <span
         class="[ -mt-4 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
@@ -176,7 +176,7 @@
     </a>
 
     <Note
-      class="[ p-6 ] [ grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-4 lg:-top-20 ]"
+      class="[ p-6 ] [ hidden lg:grid content-start justify-items-start ] [ min-h-[300px] ] [ rotate-2 md:-top-8 lg:-top-20 ]"
     >
       <span
         class="[ -mt-12 ml-24 px-4 py-2 bg-neutral/50 shadow ] [ min-w-[5rem] min-h-[2.5rem] ] [ font-medium font-decorative italic ]"
